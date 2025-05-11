@@ -1,0 +1,94 @@
+nav {
+  background-color: #222831;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.portfolio-text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.byline {
+  color: #fff;
+  font-size: 0.6rem;
+  margin: 0.2rem 0 0 0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.address {
+  color: #ddd;
+  font-size: 0.6rem;
+  margin: 0.3rem 0 0 0;
+  letter-spacing: 6.7px;
+  text-transform: none;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  
+  .menu {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .logo-container {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .logo {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .portfolio-text {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+  }
+  
+  .byline, .address {
+    font-size: 0.55rem;
+  }
+}

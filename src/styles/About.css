@@ -1,0 +1,137 @@
+header {
+  background-color: #39404a;
+  height: 100vh;
+  background-position: center center;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
+}
+
+.header-jumbotron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-content img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  order: 2;
+}
+
+.about-text {
+  color: #fff;
+  text-align: left;
+  order: 1;
+  flex: 1;
+}
+
+.about-text h3 {
+  color: #fff;
+  margin: 0 0 30px 0;
+  padding: 5px;
+  font-size: 3.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about-text p {
+  padding: 5px;
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.socialMedia {
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.socialMedia > a {
+  background-color: #222831;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMedia > a > svg {
+  height: 30px;
+  width: auto;
+}
+
+.socialMedia > a:hover {
+  background-color: #aa392d;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .about-content img {
+    order: 1;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-text {
+    order: 2;
+    text-align: center;
+  }
+  
+  .about-text h3 {
+    text-align: center;
+  }
+  
+  .socialMedia {
+    justify-content: center;
+  }
+  
+  .socialMedia > a {
+    width: 60px;
+    height: 60px;
+  }
+
+  .socialMedia > a > svg {
+    height: 30px;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-text h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .about-content img {
+    width: 200px;
+    height: 200px;
+  }
+}
