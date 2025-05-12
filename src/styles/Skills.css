@@ -1,0 +1,45 @@
+.skills-section {
+  background-color: #000000;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  border-bottom: 2px solid #ffffff;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.tabs .active {
+  border-color: #ffffff;
+  background-color: #222;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}

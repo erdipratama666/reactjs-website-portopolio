@@ -1,26 +1,30 @@
-import profilePicture from '../assets/profile-picture.png'
 import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
-import '../styles/About.css'
+import '../styles/About.css';
 
 function About() {
   return (
-    <header>
-      <div className="header-jumbotron">
+    <section id="about" className="about-section">
+      <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h3>ABOUT ME</h3>
-            <p>Halo! Saya Erdi Pratama, mahasiswa Teknik Informatika yang saat ini sedang menempuh pendidikan di STMIK Mardira Indonesia. Portofolio ini dibuat sebagai bagian dari tugas kuliah sekaligus upaya untuk mendokumentasikan perkembangan skill dan proyek yang telah saya kerjakan selama perkuliahan.</p>
+            <h3>About Me</h3>
+            <p>Halo! Perkenalkan nama saya Erdi Pratama</p>
             <div className='socialMedia'>
-              <a href="https://www.instagram.com/rditamaa/"><FaInstagram /></a>
-              <a href="https://wa.me/6283867550225"><FaWhatsapp /></a>
-              <a href="https://www.tiktok.com/@erdipratamaa"><FaTiktok /></a>
+              <a href="https://www.instagram.com/rditamaa/" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="https://wa.me/6283867550225" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp />
+              </a>
+              <a href="https://www.tiktok.com/@erdipratamaa" aria-label="TikTok">
+                <FaTiktok />
+              </a>
             </div>
           </div>
-          <img src={profilePicture} alt="Profile" />
         </div>
       </div>
-    </header>
-  )
+    </section>
+  );
 }
 
-export default About
+export default About;
