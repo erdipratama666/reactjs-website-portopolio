@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/Experience.css';
 
 function Experience() {
@@ -6,8 +5,8 @@ function Experience() {
     {
       title: "Content Creator",
       company: "Zamal Collection",
-      duration: "2023 - Present",
-      description: "Creating engaging content for social media platforms and managing brand awareness campaigns."
+      duration: "2025",
+      description: "Creating engaging content for social media platforms."
     },
   ];
 

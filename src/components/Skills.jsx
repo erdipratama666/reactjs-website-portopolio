@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Make sure this path is correct for your project structure
 import '../styles/Skills.css';
 
 const techStack = ['HTML', 'CSS', 'JavaScript', 'React',];
@@ -29,7 +28,7 @@ function Skills() {
   return (
     <section className="skills-section">
       <div className="section-title-container">
-        <h2 className="section-title">My Skills</h2>
+        <h2 className="section-title"></h2>
       </div>
       
       <div className="tabs">
