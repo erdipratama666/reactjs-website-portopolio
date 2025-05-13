@@ -1,14 +1,13 @@
-/* Your existing CSS remains unchanged */
 .about-section {
   background-color: #000000;
   color: #fff;
-  padding: 6rem 4rem;
-  scroll-margin-top: 80px; /* Added for scroll offset */
+  padding: 4rem 6rem;
+  scroll-margin-top: 80px; 
 }
 
 .about-container {
   background-color: #1a1a1a;
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 12px;
   border: 1px solid #444;
   max-width: 1200px;
@@ -72,7 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Added transition */
+  transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 .socialMedia > a:hover {
@@ -86,7 +85,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* Your existing mobile styles */
   .about-section {
     padding: 3rem 1.5rem;
   }

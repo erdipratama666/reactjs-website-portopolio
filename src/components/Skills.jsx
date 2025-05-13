@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Skills.css';
 
-const techStack = ['HTML', 'CSS', 'Javascript', 'Laravel', 'ReactJS'];
+const techStack = ['HTML', 'CSS', 'Javascript',];
 
 function Skills() {
   const [activeTab, setActiveTab] = useState('tech');

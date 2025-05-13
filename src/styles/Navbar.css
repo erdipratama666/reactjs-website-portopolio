@@ -1,4 +1,3 @@
-/* Navbar.css - Optimized for your component */
 nav {
   background-color: #DCDCDC;
   position: sticky;
@@ -106,7 +105,7 @@ nav {
   transform-origin: center;
 }
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

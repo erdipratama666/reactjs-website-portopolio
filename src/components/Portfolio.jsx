@@ -12,7 +12,14 @@ const Portfolio = () => {
             <p className="project-description">
               Website MA As Shiroji menyajikan informasi akademik dan non-akademik, termasuk publikasi berita, PPDB online, galeri kegiatan, kalender akademik, dan profil sekolah, dengan tampilan responsif dan mudah diakses di berbagai perangkat.
             </p>
-            <button className="project-button">Lihat Projek</button>
+            <a 
+              href="https://www.maassiroji.sch.id/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-button-link"
+            >
+              <button className="project-button">Lihat Projek</button>
+            </a>
           </div>
         </div>
       </div>

@@ -26,6 +26,7 @@
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  order: 2;
+  order: 1;
+  padding: 2rem 2rem;
 }
 
