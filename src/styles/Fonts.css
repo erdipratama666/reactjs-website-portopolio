@@ -1,0 +1,22 @@
+/* Fonts.css */
+/* Nunito Sans */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Nunito Sans Light'),
+       url('/Fonts/nunito-sans-v15-latin-300.woff2') format('woff2'),
+       url('/Fonts/nunito-sans-v15-latin-300.woff') format('woff');
+}
+
+/* Kanit */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kanit Regular'),
+       url('/Fonts/kanit-v12-latin-regular.woff2') format('woff2'),
+       url('/Fonts/kanit-v12-latin-regular.woff') format('woff');
+}
