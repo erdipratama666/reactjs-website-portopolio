@@ -75,7 +75,7 @@
   .hero {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 8rem 2rem 5rem;
+    padding: 8rem 6rem ;
     gap: 1rem;
   }
   
@@ -92,7 +92,7 @@
   }
   
   .hero-img {
-    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
   
   .hero-img img {
