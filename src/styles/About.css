@@ -112,7 +112,6 @@
   }
 }
 
-/* Untuk mobile */
 @media only screen and (max-width: 600px) {
   .about-section {
     padding: 3rem 1.5rem;
