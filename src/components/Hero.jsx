@@ -1,5 +1,5 @@
 import '../styles/Hero.css';
-import avatar from '/assets/profile-picture.png'; // Import gambar dengan benar
+import avatar from '../assets/profile-picture.png';
 
 const Hero = () => {
   return (
@@ -12,14 +12,7 @@ const Hero = () => {
       </div>
       
       <div className="hero-img">
-        {/* Gunakan atribut loading="lazy" dan ukuran yang optimal */}
-        <img 
-          src={avatar} 
-          alt="Erdi Pratama"
-          loading="lazy"
-          width="400" 
-          height="400" 
-        />
+        <img src={avatar} alt="Erdi Pratama" />
       </div>
     </section>
   );
