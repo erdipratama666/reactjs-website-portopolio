@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10rem 8rem;
+  padding: 10rem 8rem 15rem;
   background-color: #000000;
   color: white;
   flex-wrap: wrap;
@@ -57,18 +57,9 @@
   transform: scale(1.05);
 }
 
-/* Laptop & Desktop kecil */
-@media (max-width: 1200px) {
-  .hero {
-    padding: 8rem 5rem;
-  }
-}
-
-/* Tablet Besar */
 @media (max-width: 992px) {
   .hero {
-    padding: 6rem 4rem;
-    gap: 1.5rem;
+    padding: 4rem;
   }
   
   .hero-text h1 {
@@ -78,20 +69,14 @@
   .hero-text h2 {
     font-size: 1.8rem;
   }
-  
-  .hero-img img {
-    width: 220px;
-    height: 220px;
-  }
 }
 
-/* Tablet */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 5rem 3rem;
-    gap: 2rem;
+    padding: 8rem 6rem ;
+    gap: 1rem;
   }
   
   .hero-text {
@@ -103,15 +88,7 @@
   }
   
   .hero-text h2 {
-    font-size: 1.6rem;
-  }
-  
-  .hero-text .intro {
-    font-size: 1.1rem;
-  }
-  
-  .hero-text .welcome {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
   .hero-img {
@@ -124,76 +101,17 @@
   }
 }
 
-/* Mobile Landscape */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .hero {
-    padding: 4rem 2rem;
-    gap: 1.5rem;
+    padding: 2rem 1rem;
   }
   
   .hero-text h1 {
     font-size: 2rem;
   }
   
-  .hero-text h2 {
-    font-size: 1.4rem;
-  }
-  
   .hero-img img {
     width: 180px;
     height: 180px;
-    border-width: 3px;
-  }
-}
-
-/* Mobile Portrait */
-@media (max-width: 480px) {
-  .hero {
-    padding: 3rem 1.5rem;
-    gap: 1rem;
-  }
-  
-  .hero-text .intro {
-    font-size: 1rem;
-  }
-  
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-text h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .hero-text .welcome {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-img img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* Mobile Kecil */
-@media (max-width: 360px) {
-  .hero {
-    padding: 2.5rem 1rem;
-  }
-  
-  .hero-text h1 {
-    font-size: 1.6rem;
-  }
-  
-  .hero-text h2 {
-    font-size: 1.2rem;
-  }
-  
-  .hero-img img {
-    width: 140px;
-    height: 140px;
-    border-width: 2px;
   }
 }

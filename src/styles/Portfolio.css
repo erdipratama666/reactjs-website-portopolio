@@ -64,10 +64,10 @@
   background-color: #000000;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   transition: background-color 0.3s;
   font-family: "Kanit", sans-serif;
@@ -75,12 +75,26 @@
 }
 
 .project-button:hover {
-  background-color: #393e46;
+  background-color: #333333;
 }
 
 .project-button-link {
-  text-decoration: none;
   display: inline-block;
+  padding: 16px 24px; /* cukup besar untuk sentuhan */
+  margin-top: 1rem;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-button-link:hover {
+  background-color: #333333;
 }
 
 @media only screen and (max-width: 1000px) {
