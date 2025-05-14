@@ -176,7 +176,7 @@
 @media only screen and (max-width: 600px) {
   #experience {
     padding: 6rem 1rem;
-    min-height: 100vh; 
+    min-height: auto; 
   }
   
   #experience > .wrapper {
