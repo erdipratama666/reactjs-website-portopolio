@@ -75,8 +75,9 @@
   .hero {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 8rem 2rem 10 rem;
     gap: 1rem;
+    min-height: 100vh;
   }
   
   .hero-text {

@@ -8,6 +8,7 @@
   width: 100%;
   overflow: hidden; 
   min-height: 100vh; 
+  scroll-margin-top: 100px;
 }
 
 #experience > .wrapper {
@@ -174,7 +175,7 @@
 
 @media only screen and (max-width: 600px) {
   #experience {
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
     min-height: auto; 
   }
   
