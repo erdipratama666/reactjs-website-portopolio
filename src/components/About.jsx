@@ -2,7 +2,6 @@ import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import '../styles/About.css';
 
 function About() {
-  // Definisikan socialLinks sebagai komponen JSX biasa
   const socialLinks = (
     <div className='socialMedia' itemProp="sameAs">
       <a 
@@ -49,8 +48,6 @@ function About() {
               kemampuan coding saya. Selain kuliah, saya juga mengerjakan proyek kecil-kecilan 
               untuk memperdalam pemahaman tentang front-end dan back-end development.
             </p>
-            {/* Render socialLinks di sini */}
-            {socialLinks}
           </div>
         </div>
       </div>
