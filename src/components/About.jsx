@@ -2,6 +2,36 @@ import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import '../styles/About.css';
 
 function About() {
+  // Definisikan socialLinks sebagai komponen JSX biasa
+  const socialLinks = (
+    <div className='socialMedia' itemProp="sameAs">
+      <a 
+        href="https://www.instagram.com/rditamaa" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Instagram"
+      >
+        <FaInstagram />
+      </a>
+      <a 
+        href="https://wa.me/6283867550225" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
+      <a 
+        href="https://www.tiktok.com/@erdipratamaa" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="TikTok"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+  );
+
   return (
     <section id="about" className="about-section">
       <div className="about-container">
@@ -15,36 +45,12 @@ function About() {
               Saat ini, saya aktif mempelajari berbagai teknologi seperti HTML, CSS, JavaScript, 
               dan framework modern untuk membangun website yang fungsional dan menarik.
               <br /><br />
-              Saya sangat tertarik dengan dunia pemrograman dan selalu bersemangat untuk mengasah 
+	           Saya sangat tertarik dengan dunia pemrograman dan selalu bersemangat untuk mengasah 
               kemampuan coding saya. Selain kuliah, saya juga mengerjakan proyek kecil-kecilan 
               untuk memperdalam pemahaman tentang front-end dan back-end development.
             </p>
-            <div className='socialMedia'>
-              <a 
-                href="https://www.instagram.com/rditamaa" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a 
-                href="https://wa.me/6283867550225" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp />
-              </a>
-              <a 
-                href="https://www.tiktok.com/@erdipratamaa" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="TikTok"
-              >
-                <FaTiktok />
-              </a>
-            </div>
+            {/* Render socialLinks di sini */}
+            {socialLinks}
           </div>
         </div>
       </div>
