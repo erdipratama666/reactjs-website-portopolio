@@ -12,9 +12,7 @@
   },
   "reactSnap": {
     "inlineCss": true,
-    "puppeteerArgs": [
-      "--no-sandbox"
-    ]
+    "puppeteerArgs": ["--no-sandbox"]
   },
   "dependencies": {
     "react": "^18.3.1",

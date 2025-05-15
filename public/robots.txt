@@ -1,4 +1,3 @@
-User-agent: *
-Allow: /
-
 Sitemap: https://www.erdipratama.my.id/sitemap.xml
+User-agent: *
+Disallow:
