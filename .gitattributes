@@ -1,6 +1,14 @@
+# Set automatic normalization of line endings for all files
 * text=auto
-*.js text
-*.jsx text
-*.json text
-*.css text
-*.html text
+
+# Pastikan file JavaScript, JSX, JSON, CSS, HTML pakai LF
+*.js     text eol=lf
+*.jsx    text eol=lf
+*.json   text eol=lf
+*.css    text eol=lf
+*.html   text eol=lf
+
+# Bisa tambahkan file lain yang penting juga
+*.ts     text eol=lf
+*.tsx    text eol=lf
+*.md     text eol=lf
