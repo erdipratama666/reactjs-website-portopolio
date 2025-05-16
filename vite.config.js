@@ -4,7 +4,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
-  base: '/',
   plugins: [
     react(),
     VitePWA({
