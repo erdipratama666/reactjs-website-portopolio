@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import '../styles/Skills.css';
 
 const techStack = ['HTML', 'CSS', 'JavaScript', 'React',];

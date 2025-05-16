@@ -1,5 +1,5 @@
 import '../styles/Hero.css';
-import avatar from '../assets/profile-picture.png';
+import avatar from '../assets/profile-picture.webp';
 
 const Hero = () => {
   return (
