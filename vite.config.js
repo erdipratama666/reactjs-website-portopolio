@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'inline', 
+      injectRegister: 'inline',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Erdi Pratama - Web Developer Portfolio',
@@ -32,5 +32,18 @@ export default defineConfig({
   ],
   build: {
     sourcemap: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info.pop();
+          // Khusus untuk profile-picture.png, pertahankan nama aslinya
+          if (assetInfo.name.includes('profile-picture')) {
+            return `assets/[name].[ext]`;
+          }
+          return `assets/[name]-[hash].[ext]`;
+        },
+      },
+    },
   }
 })

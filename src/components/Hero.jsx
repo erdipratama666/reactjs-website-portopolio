@@ -1,14 +1,9 @@
 import '../styles/Hero.css';
-import { Helmet } from 'react-helmet';
 import avatar from '../assets/profile-picture.png';
 
 const Hero = () => {
   return (
     <>
-      <Helmet>
-        <link rel="preload" href={avatar} as="image" />
-      </Helmet>
-
       <section className="hero" data-testid="hero-section">
         <div className="hero-text">
           <p className="intro">Hi, I'm</p>
