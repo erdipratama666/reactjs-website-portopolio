@@ -14,6 +14,8 @@ const Hero = () => {
       <div className="hero-img">
         <img
           src={avatar} // gunakan variabel avatar sebagai src
+          srcSet="/assets/profile-picture-300.webp 300w, /assets/profile-picture-600.webp 600w"
+          sizes="(max-width: 600px) 300px, 600px"
           alt="Erdi Pratama - Web Developer"
           width="300"
           height="300"
