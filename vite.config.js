@@ -21,7 +21,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'inline',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.webp'],
       manifest: {
         name: 'Erdi Pratama - Web Developer Portfolio',
         short_name: 'Erdi Pratama',
@@ -29,14 +29,14 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'logo192.png',
+            src: 'logo192.webp',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/webp'
           },
           {
-            src: 'logo512.png',
+            src: 'logo512.webp',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/webp'
           }
         ]
       }

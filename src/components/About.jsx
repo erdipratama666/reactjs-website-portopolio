@@ -44,10 +44,12 @@ function About() {
               Saat ini, saya aktif mempelajari berbagai teknologi seperti HTML, CSS, JavaScript, 
               dan framework modern untuk membangun website yang fungsional dan menarik.
               <br /><br />
-	           Saya sangat tertarik dengan dunia pemrograman dan selalu bersemangat untuk mengasah 
+              Saya sangat tertarik dengan dunia pemrograman dan selalu bersemangat untuk mengasah 
               kemampuan coding saya. Selain kuliah, saya juga mengerjakan proyek kecil-kecilan 
               untuk memperdalam pemahaman tentang front-end dan back-end development.
             </p>
+            {/* Menampilkan ikon sosial media */}
+            {socialLinks}
           </div>
         </div>
       </div>
