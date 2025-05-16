@@ -2,13 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: '/',
   plugins: [
     react(),
     VitePWA({
-      // konfigurasi PWA default atau kamu sesuaikan di sini
       registerType: 'autoUpdate',
       manifest: {
         name: 'Erdi Pratama Portfolio',
@@ -17,26 +17,36 @@ export default defineConfig({
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#ffffff',
-        icons: [
-          {
-            src: '/favicon.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/favicon.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
+
+      },
+      // Tambahkan include untuk memastikan favicon.png ter-copy
+      includeAssets: ['assets/profile-picture.png'],
     }),
     createHtmlPlugin({
       minify: true,
-      // Tidak meng-inject profilePictureUrl statis supaya path gambar tidak bermasalah
     }),
   ],
   build: {
     sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Pastikan profile-picture.png tetap berada di /assets/
+          if (assetInfo.name === 'profile-picture.png') {
+            return 'assets/profile-picture.png';
+          }
+          // Asset lainnya di-hash seperti biasa
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
+    }
   }
 });

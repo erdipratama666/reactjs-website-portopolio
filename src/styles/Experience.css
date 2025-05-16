@@ -1,7 +1,7 @@
 #experience {
   background-color: rgb(255, 255, 255);
   position: relative;
-  padding: 8rem 4rem;
+  padding: 4rem 2rem;
   font-family: "Kanit", sans-serif;
   width: 100%;
   overflow: hidden;
@@ -12,8 +12,9 @@
 #experience > .wrapper {
   margin: auto;
   width: 90%;
-  max-width: 1200px;
+  max-width: 800px;
   position: relative;
+  justify-content: center;
 }
 
 #experience h3 {
@@ -30,7 +31,6 @@
   content: none !important;
 }
 
-/* Experience List Layout */
 .experience-list {
   list-style: none;
   padding: 0;
