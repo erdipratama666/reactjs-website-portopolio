@@ -4,37 +4,25 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
-    react({
-      jsxRuntime: 'automatic',
-      fastRefresh: true,
-    }),
+    react(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'profile-picture.webp'],
       manifest: {
-        name: 'Erdi Pratama - Web Developer Portfolio',
+        name: 'Portofolio Erdi Pratama',
+        short_name: 'ErdiDev',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#000000',
         icons: [
           {
-            src: '/logo192.png', // Pastikan file ada di public/
+            src: '/pwa-icon.png',
             sizes: '192x192',
             type: 'image/png'
           }
         ]
       }
     })
-  ],
-  esbuild: {
-    jsxInject: `import React from 'react'`,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react/jsx-runtime'],
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
-        }
-      }
-    }
-  }
+  ]
 })
