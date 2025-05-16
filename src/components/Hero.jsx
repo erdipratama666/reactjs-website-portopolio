@@ -13,14 +13,16 @@ const Hero = () => {
         </div>
         
         <div className="hero-img">
-          <img
-            src={avatar}
-            alt="Erdi Pratama - Web Developer"
-            width="300"
-            height="300"
-            loading="eager"
-            itemProp="image"
-          />
+         <img
+          src="/assets/profile-picture.webp"
+          srcSet="/assets/profile-picture-300.webp 300w, /assets/profile-picture-600.webp 600w"
+          sizes="(max-width: 600px) 300px, 600px"
+          alt="Erdi Pratama - Web Developer"
+          width="300"
+          height="300"
+          loading="eager"
+          itemProp="image"
+        />
         </div>
       </section>
     </>
