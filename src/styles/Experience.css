@@ -11,8 +11,8 @@
 
 #experience > .wrapper {
   margin: auto;
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 900px;
   position: relative;
 }
 
