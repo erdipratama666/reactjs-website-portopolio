@@ -31,8 +31,7 @@ function Experience() {
             <li className="experience-item" key={index}>
               <h4>{job.title}</h4>
               <p className="position">{job.company}</p>
-              <p className="duration">{job.duration}</p>
-              <p className="description">{job.description}</p>
+              {/* Hanya tampilkan title dan company, duration dan description dihilangkan */}
             </li>
           ))}
         </ul>

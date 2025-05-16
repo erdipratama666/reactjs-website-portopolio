@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Tambahkan useEffect di sini
+import React, { useState, useEffect } from 'react'; 
 import '../styles/Navbar.css';
 
 function Navbar() {
