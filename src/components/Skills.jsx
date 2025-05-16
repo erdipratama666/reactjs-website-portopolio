@@ -1,5 +1,5 @@
 import '../styles/Skills.css';
-
+import { useState } from 'react';
 const techStack = ['HTML', 'CSS', 'JavaScript', 'React',];
 const softSkills = ['Word', 'Excel', 'Github', ];
 const languages = ['English', 'Bahasa Indonesia',];
