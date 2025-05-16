@@ -4,10 +4,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
+  base: '/',   // <== Tambahkan ini
   plugins: [
     react(),
-    VitePWA({
-    }),
+    VitePWA({}),
     createHtmlPlugin({
       minify: true,
       inject: {
