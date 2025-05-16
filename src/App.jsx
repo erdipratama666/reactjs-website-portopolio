@@ -1,10 +1,6 @@
-import React from 'react'; // Tambahkan impor React
 import { Helmet } from 'react-helmet-async';
 import './App.css';
 import Home from './pages/Home';
-
-// HelmetProvider harus ditempatkan di file main.jsx
-// App.jsx hanya menggunakan komponen Helmet
 
 function App() {
   return (

@@ -10,11 +10,7 @@ import SEO from '../components/SEO'
 function Home() {
   return (
     <>
-        <SEO
-        title="Beranda | Erdi Pratama"
-        description="Ini halaman beranda dari portofolio Erdi Pratama"
-        url="https://www.erdipratama.my.id/"
-        />
+        <SEO />
         <Navbar />
         <Hero />
         <About />
