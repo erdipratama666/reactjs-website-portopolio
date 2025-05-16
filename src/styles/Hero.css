@@ -32,7 +32,7 @@
 
 .intro {
   font-size: 1.2rem;
-  color: #00ffd1; /* Aksen cerah */
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 
@@ -57,7 +57,7 @@ h2 {
 
 .hero-img img {
   border-radius: 50%;
-  border: 4px solid #00ffd1;
+  border: 4px solid #ffffff;
   max-width: 200px;
   height: auto;
   transition: transform 0.3s ease;
@@ -69,6 +69,6 @@ h2 {
 
 @media (min-width: 768px) {
   .hero-img img {
-    max-width: 300px;
+    max-width: 200px;
   }
 }
