@@ -15,7 +15,7 @@ const SEO = ({
     "@type": "Person",
     "name": "Erdi Pratama",
     "url": "https://www.erdipratama.my.id",
-    "image": "https://www.erdipratama.my.id/profile-picture.webp",
+    "image": "https://www.erdipratama.my.id/profile-picture.png",
     "sameAs": [
       "https://www.instagram.com/rditamaa",
       "https://www.tiktok.com/@erdipratamaa"
