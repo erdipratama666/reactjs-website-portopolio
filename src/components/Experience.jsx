@@ -6,13 +6,25 @@ function Experience() {
       title: "Content Creator",
       company: "Zamal Collection",
       duration: "2025",
-      description: "Creating engaging content for social media platforms."
+      description: "Creating engaging content for social media platforms.",
+    },
+    {
+      title: "Frontend Developer",
+      company: "Creative Dev Studio",
+      duration: "2024",
+      description: "Developed and maintained responsive web interfaces.",
+    },
+    {
+      title: "UI/UX Designer",
+      company: "Visionary Tech",
+      duration: "2023",
+      description: "Designed user-friendly interfaces for web and mobile apps.",
     },
   ];
 
   return (
     <section id="experience">
-      <div className='wrapper'>
+      <div className="wrapper">
         <h3>Experience</h3>
         <ul className="experience-list">
           {experienceData.map((job, index) => (
