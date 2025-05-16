@@ -8,12 +8,14 @@
   <meta name="keywords" content="Erdi Pratama, web developer, portofolio, react developer, frontend" />
   <meta name="author" content="Erdi Pratama" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.erdipratama.my.id/" />
   <meta property="og:title" content="Erdi Pratama | Web Developer" />
   <meta property="og:description" content="Portofolio Erdi Pratama, Web Developer yang berfokus pada pengembangan website modern dengan React.js" />
   <meta property="og:image" content="https://www.erdipratama.my.id/og-image.jpg" />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.erdipratama.my.id/" />
   <meta name="twitter:title" content="Erdi Pratama | Web Developer" />
@@ -21,24 +23,54 @@
   <meta name="twitter:image" content="https://www.erdipratama.my.id/og-image.jpg" />
 
   <link rel="canonical" href="https://www.erdipratama.my.id/" />
+
+  <!-- Preload gambar avatar untuk LCP -->
   <link rel="preload" href="/assets/profile-picture.png" as="image" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preconnect ke Google Fonts untuk percepat font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Preload & load font dengan font-display swap -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
+  />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
   </noscript>
 
   <title>Erdi Pratama | Web Developer</title>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<body>
+  <div id="root"></div>
+
+  <!-- Load React main script -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

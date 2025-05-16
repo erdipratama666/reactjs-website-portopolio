@@ -1,23 +1,42 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
-  base: '/',   // <== Tambahkan ini
+  base: '/',
   plugins: [
     react(),
-    VitePWA({}),
+    VitePWA({
+      // konfigurasi PWA default atau kamu sesuaikan di sini
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'Erdi Pratama Portfolio',
+        short_name: 'ErdiPortfolio',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#000000',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/favicon.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/favicon.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    }),
     createHtmlPlugin({
       minify: true,
-      inject: {
-        data: {
-          profilePictureUrl: '/assets/profile-picture.png',
-        },
-      },
+      // Tidak meng-inject profilePictureUrl statis supaya path gambar tidak bermasalah
     }),
   ],
   build: {
     sourcemap: false,
   }
-})
+});
