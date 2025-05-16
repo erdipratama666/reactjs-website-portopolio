@@ -6,7 +6,8 @@
   margin-top: 2rem;
   background-color: #000; 
   color: #fff;
-  min-height: 100vh;
+  min-height: auto; 
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -32,7 +33,7 @@
 
 .intro {
   font-size: 1.2rem;
-  color: #00ffd1; /* Aksen cerah */
+  color: #00ffd1; 
   margin-bottom: 0.5rem;
 }
 
