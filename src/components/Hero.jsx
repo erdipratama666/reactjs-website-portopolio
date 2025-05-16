@@ -1,29 +1,29 @@
 import '../styles/Hero.css';
-import avatar from '../assets/profile-picture.png'; // import gambarmu di sini
+import avatar from '../assets/profile-picture.png';
 
 const Hero = () => {
   return (
-    <section className="hero" data-testid="hero-section">
-      <div className="hero-text">
-        <p className="intro">Hi, I'm</p>
-        <h1 itemProp="name">Erdi Pratama</h1>
-        <h2 itemProp="jobTitle">Web Developer</h2>
-        <p className="welcome">Welcome to My personal website.</p>
-      </div>
-
-      <div className="hero-img">
-        <img
-          src={avatar} // gunakan variabel avatar sebagai src
-          srcSet="/assets/profile-picture-300.webp 300w, /assets/profile-picture-600.webp 600w"
-          sizes="(max-width: 600px) 300px, 600px"
-          alt="Erdi Pratama - Web Developer"
-          width="300"
-          height="300"
-          loading="eager"
-          itemProp="image"
-        />
-      </div>
-    </section>
+    <>
+      <section className="hero" data-testid="hero-section">
+        <div className="hero-text">
+          <p className="intro">Hi, I'm</p>
+          <h1 itemProp="name">Erdi Pratama</h1>
+          <h2 itemProp="jobTitle">Web Developer</h2>
+          <p className="welcome">Welcome to My personal website.</p>
+        </div>
+        
+        <div className="hero-img">
+          <img
+            src={avatar}
+            alt="Erdi Pratama - Web Developer"
+            width="300"
+            height="300"
+            loading="eager"
+            itemProp="image"
+          />
+        </div>
+      </section>
+    </>
   );
 };
 
