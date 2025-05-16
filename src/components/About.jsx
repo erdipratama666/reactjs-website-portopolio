@@ -48,7 +48,7 @@ function About() {
               kemampuan coding saya. Selain kuliah, saya juga mengerjakan proyek kecil-kecilan 
               untuk memperdalam pemahaman tentang front-end dan back-end development.
             </p>
-            {/* Menampilkan ikon sosial media */}
+            {}
             {socialLinks}
           </div>
         </div>
