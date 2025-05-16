@@ -1,47 +1,42 @@
 #experience {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: relative;
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 4rem 2rem;
   font-family: "Kanit", sans-serif;
-  margin: 0;
-  border-left: 4px solid #222831;
-  border-right: 4px solid #222831;
-  overflow: hidden; /* supaya anak-anak tidak keluar batas */
-}
-
-/* Buang position dan left, transform dari h3 biar dia tetap dalam flow normal */
-#experience h3 {
   width: 100%;
-  max-width: 100vw;
-  text-align: center;
-  font-size: 2.8rem;
-  margin: 0 0 3rem 0;
-  color: #222831;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  padding: 0;
-  background-color: white;
-  box-sizing: border-box; /* pastikan padding dan margin benar */
-  border-bottom: none; /* hilangkan garis bawah kalau ada */
+  overflow: hidden;
+  min-height: 100vh;
+  scroll-margin-top: 100px;
 }
 
-/* Wrapper tetap di bawah judul dan terjaga lebarnya */
 #experience > .wrapper {
-  margin: 0 auto;
+  margin: auto;
   width: 90%;
-  max-width: 800px;
+  max-width: 700px;
   position: relative;
-  z-index: 5;
 }
 
-/* List dan item tetap */
+#experience h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 3rem 0;
+  color: #000;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#experience h3::after {
+  content: none !important;
+}
+
 .experience-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -58,24 +53,24 @@
   }
 }
 
+/* Experience Card */
 .experience-item {
   background: #DCDCDC;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.2rem;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .experience-item h4 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: #222831;
-  border-bottom: none !important;
-  padding-bottom: 0;
 }
 
 .position {
@@ -85,47 +80,115 @@
   color: #000;
 }
 
-/* Responsive tweaks */
-@media only screen and (max-width: 1000px) {
+.duration {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media only screen and (min-width: 1001px) {
+  #experience {
+    padding: 12rem 0;
+  }
+
   #experience > .wrapper {
-    width: 90%;
+    width: 80%;
   }
-  
+
   #experience h3 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    margin: 6rem 3rem 8rem 0rem;
+    letter-spacing: 5px;
   }
-  
+
+  .experience-list {
+    gap: 2.5rem;
+  }
+
   .experience-item {
-    padding: 1.5rem;
+    padding: 2rem;
   }
-  
+
   .experience-item h4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  
+
   .position {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #experience {
-    padding: 4rem 1rem;
-    border-left: 2px solid #222831;
-    border-right: 2px solid #222831;
+    padding: 6rem 1rem;
+    min-height: auto;
   }
-  
+
+  #experience > .wrapper {
+    width: 95%;
+  }
+
+  .experience-item {
+    padding: 1rem;
+  }
+
+  .experience-item h4 {
+    font-size: 1.3rem;
+  }
+
+  .position {
+    font-size: 1rem;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #experience {
+    padding: 3rem 0;
+  }
+
+  #experience > .wrapper {
+    width: 92%;
+  }
+
   #experience h3 {
-    font-size: 1.8rem;
-    letter-spacing: 3px;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin: 1.5rem 0 2.5rem 0;
   }
-  
+
   .experience-item h4 {
     font-size: 1.2rem;
   }
-  
+
   .position {
     font-size: 0.95rem;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
   }
 }

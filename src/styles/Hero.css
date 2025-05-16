@@ -61,6 +61,7 @@ h2 {
   border: none;
 }
 
+
 /* Gambar Bulat & Responsif */
 .hero-img img {
   border-radius: 50%;
@@ -71,33 +72,22 @@ h2 {
   height: 100px;
   transition: transform 0.3s ease;
   outline: none;
-  box-shadow: none;
-  cursor: pointer;
 }
 
-/* Hover & Focus Zoom tanpa outline/kotak */
-.hero-img img:hover,
-.hero-img img:focus {
+.hero-img img:hover {
   transform: scale(1.05);
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: #fff;
   will-change: transform;
 }
 
-/* Hilangkan outline dan border dari pembungkus (jika ada) */
+.hero-img img:focus {
+  transform: scale(1.05);
+  outline: none; 
+  border-color: #fff;
+}
+
 .hero-img a {
   outline: none;
   border: none;
-  text-decoration: none;
-  background: transparent;
-}
-
-.hero-img a:hover,
-.hero-img a:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
 }
 
 @media (min-width: 768px) {
@@ -105,14 +95,6 @@ h2 {
     width: 200px;
     height: 200px;
   }
-}
-
-/* Fokus keyboard tetap jelas (aksesibilitas) */
-.hero-img img:focus-visible {
-  outline: 3px dashed #00bfff;
-  outline-offset: 6px;
-  border-color: #00bfff;
-  transition: outline 0.2s ease, border-color 0.2s ease;
 }
 
 @font-face {
