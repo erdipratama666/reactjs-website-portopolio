@@ -7,13 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      // konfigurasi yang sudah ada
     }),
     createHtmlPlugin({
       minify: true,
       inject: {
         data: {
-          // Ini akan diinjeksi ke HTML
           profilePictureUrl: '/assets/profile-picture.png',
         },
       },
