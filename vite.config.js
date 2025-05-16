@@ -1,11 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
   base: '/',
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-runtime',
+            {
+              regenerator: true,
+            },
+          ],
+        ],
+      },
+      fastRefresh: true,
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'inline',
@@ -28,22 +40,39 @@ export default defineConfig({
           }
         ]
       }
+    }),
+    visualizer({
+      open: true,
+      gzipSize: true,
+      brotliSize: true
     })
   ],
   build: {
     sourcemap: false,
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info.pop();
-          // Khusus untuk profile-picture.png, pertahankan nama aslinya
-          if (assetInfo.name.includes('profile-picture')) {
-            return `assets/[name].[ext]`;
-          }
-          return `assets/[name]-[hash].[ext]`;
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'helmet': ['react-helmet-async'],
+          'critical': ['./src/components/Hero.jsx', './src/components/Navbar.jsx'],
         },
-      },
+        entryFileNames: (chunkInfo) => {
+          return chunkInfo.name.includes('critical') 
+            ? 'assets/[name]-[hash].js'
+            : 'assets/[name]-[hash].js';
+        }
+      }
     },
-  }
+    minify: 'esbuild',
+    assetsInlineLimit: 4096,
+  },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+    legalComments: 'none',
+    treeShaking: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
 })
