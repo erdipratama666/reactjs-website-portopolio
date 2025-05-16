@@ -1,3 +1,4 @@
+import React from 'react'; 
 import '../styles/Hero.css';
 import avatar from '../assets/profile-picture.png';
 
@@ -11,7 +12,7 @@ const Hero = () => {
           <h2 itemProp="jobTitle">Web Developer</h2>
           <p className="welcome">Welcome to My personal website.</p>
         </div>
-
+        
         <div className="hero-img">
           <img
             src={avatar}

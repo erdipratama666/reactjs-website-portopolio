@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Tambahkan useEffect di sini
 import '../styles/Navbar.css';
-
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   };
-
+  
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -16,7 +15,7 @@ function Navbar() {
       document.body.style.overflow = 'auto';
     }
   }, [menuOpen]);
-
+  
   return (
     <nav role="navigation" className="navbar">
       <div className="wrapper">
@@ -25,7 +24,7 @@ function Navbar() {
             <p className="byline">ERDI PRATAMA</p>
           </div>
         </div>
-
+        
         <button
           className={`hamburger ${menuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -36,7 +35,7 @@ function Navbar() {
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
-
+        
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
