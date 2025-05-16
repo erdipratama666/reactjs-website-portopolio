@@ -3,8 +3,7 @@ import '../styles/Portfolio.css';
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h1 className="section-title">Portfolio</h1>
-      
+      <h1 className="section-title black-tittle">Portfolio</h1>
       <div className="portfolio-content">
         <div className="project-list">
           <div className="project">

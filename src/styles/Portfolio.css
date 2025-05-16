@@ -4,23 +4,76 @@
   padding: 8rem 0;
   font-family: "Kanit", sans-serif;
   margin: 0;
+  overflow: hidden;
+  scroll-margin-top: 100px;
+  scroll-behavior: smooth;
 }
 
 .section-title {
   text-align: center;
   font-size: 2.8rem;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 4rem auto;
   padding: 0;
-  color: #000000;
+  color: #000000 !important; 
   letter-spacing: 5px;
   text-transform: uppercase;
   width: 100%;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #DCDCDC;
+  border-radius: 2px;
 }
 
 .portfolio-content {
   margin: auto;
   width: 80%;
-  max-width: 800px;
+  max-width: 900px;
+  position: relative;
+}
+
+.portfolio-content::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -150px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(220, 220, 220, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  animation: floatBubble 15s infinite alternate ease-in-out;
+}
+
+.portfolio-content::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -100px;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(220, 220, 220, 0.15);
+  border-radius: 50%;
+  z-index: -1;
+  animation: floatBubble 12s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(30px, -30px);
+  }
 }
 
 .project-list {
@@ -29,91 +82,271 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .project {
   background: #DCDCDC;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.1) 50%, transparent 51%);
+  background-size: 15px 15px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease;
 }
 
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project:hover::before {
+  opacity: 1;
 }
 
 .project-title {
-  font-size: 1.6rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
   color: #222831;
   letter-spacing: 1px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.6);
+  padding-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.project-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #222831;
+  transition: width 0.4s ease;
+}
+
+.project:hover .project-title::after {
+  width: 100%;
 }
 
 .project-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.8;
   color: #333;
-  margin: 1rem 0 0 0;
+  margin: 1.5rem 0 1.2rem 0;
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 0.3s ease;
 }
 
-.project-button {
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  transition: background-color 0.3s;
-  font-family: "Kanit", sans-serif;
-  letter-spacing: 1px;
-}
-
-.project-button:hover {
-  background-color: #333333;
+.project:hover .project-description {
+  padding-left: 10px;
 }
 
 .project-button-link {
   display: inline-block;
-  padding: 16px 24px; /* cukup besar untuk sentuhan */
-  margin-top: 1rem;
+  padding: 16px 32px;
+  margin-top: 1.5rem;
   background-color: #000000;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 30px;
   font-size: 1.2rem;
   font-family: "Kanit", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-button-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #333333;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
 }
 
 .project-button-link:hover {
-  background-color: #333333;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  letter-spacing: 2px;
+}
+
+.project-button-link:hover::before {
+  width: 100%;
+}
+
+/* Animasi untuk project saat muncul */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Corner decoration */
+.project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 40px 40px 0;
+  border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
+  transition: all 0.3s ease;
+}
+
+.project:hover::after {
+  border-width: 0 60px 60px 0;
+}
+
+/* Responsive Design */
+
+@media only screen and (min-width: 1001px) {
+  #portfolio {
+    padding: 10rem 0;
+  }
+  
+  .portfolio-content {
+    width: 75%;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .project {
+    padding: 3rem;
+    border-radius: 15px;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+  
+  .project-description {
+    font-size: 1.2rem;
+  }
+  
+  .project-button-link {
+    font-size: 1.25rem;
+    padding: 18px 36px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
+  .portfolio-content {
+    width: 85%;
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+  
+  .project {
+    padding: 2rem;
+  }
+  
+  .project-title {
+    font-size: 1.7rem;
+  }
+  
+  .project-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .project-button-link {
+    padding: 14px 28px;
+  }
+  
+  /* Disable some animations to improve performance */
+  .portfolio-content::before,
+  .portfolio-content::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio {
+    padding: 6rem 0;
+  }
+  
   .portfolio-content {
     width: 90%;
   }
   
   .section-title {
     font-size: 2.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 2.5rem;
   }
   
   .project {
-    padding: 1.5rem;
+    padding: 1.8rem;
+    border-radius: 10px;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-title {
+    font-size: 1.6rem;
+    padding-bottom: 12px;
+  }
+  
+  .project-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 1.2rem 0 1rem 0;
+  }
+  
+  .project-button-link {
+    padding: 14px 26px;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #portfolio {
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
   
   .section-title {
@@ -122,11 +355,82 @@
     margin-bottom: 2rem;
   }
   
+  .section-title::after {
+    width: 60px;
+    height: 3px;
+    bottom: -12px;
+  }
+  
+  .portfolio-content {
+    width: 92%;
+  }
+  
+  .project-list {
+    gap: 2.5rem;
+  }
+  
+  .project {
+    padding: 1.5rem;
+  }
+  
   .project-title {
     font-size: 1.4rem;
+    padding-bottom: 10px;
   }
   
   .project-description {
     font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0 0.8rem 0;
+  }
+  
+  .project-button-link {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 25px;
+  }
+  
+  .project:hover,
+  .project:hover .project-description {
+    padding-left: 0;
+    transform: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #portfolio {
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  
+  .project {
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+    padding-bottom: 8px;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    margin: 0.8rem 0 0.8rem 0;
+  }
+  
+  .project-button-link {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+  }
+  
+  /* Disable corner decoration on very small screens */
+  .project::after {
+    display: none;
   }
 }

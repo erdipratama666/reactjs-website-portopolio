@@ -1,17 +1,71 @@
 .about-section {
   background-color: #000000;
   color: #fff;
-  padding: 0rem 5rem;
-  scroll-margin-top: 80px; 
+  padding: 3rem 5rem;
+  scroll-margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  z-index: 1;
 }
 
 .about-container {
   background-color: #1a1a1a;
-  padding: 2rem;
+  padding: 3rem 2.5rem;
   border-radius: 12px;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.about-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  z-index: -1;
+  border-radius: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.about-container:hover::before {
+  opacity: 1;
 }
 
 .about-content {
@@ -20,6 +74,7 @@
   align-items: center;      
   flex-direction: column;   
   text-align: center;
+  position: relative;
 }
 
 .about-text {
@@ -29,11 +84,12 @@
   flex: 1;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
 }
 
 .about-text h3 {
   color: #fff;
-  margin: 0 0 30px 0;
+  margin: 0 0 35px 0;
   padding: 5px;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -41,16 +97,60 @@
   text-align: center;
   position: relative;
   display: inline-block;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #fff, #ccc, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-text h3::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeInWidth 0.8s forwards 0.5s;
 }
 
 .about-text h3::after {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 60%;
   height: 3px;
-  background-color: #444;
+  background: linear-gradient(to right, transparent, #fff, transparent);
   bottom: -10px;
-  left: 25%;
+  left: 20%;
+  transform-origin: center;
+  animation: widthExpand 1s ease forwards;
+}
+
+@keyframes widthExpand {
+  from {
+    width: 0;
+    opacity: 0;
+    left: 50%;
+  }
+  to {
+    width: 60%;
+    opacity: 1;
+    left: 20%;
+  }
+}
+
+@keyframes fadeInWidth {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 30px;
+    opacity: 1;
+  }
 }
 
 .about-text p {
@@ -58,16 +158,40 @@
   margin: 0 0 30px 0;
   color: #fff;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: justify;
+  position: relative;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.about-text p:hover {
+  opacity: 1;
+}
+
+.about-text p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .socialMedia {
   color: #fff;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.socialMedia::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #fff, transparent);
 }
 
 .socialMedia > a {
@@ -79,17 +203,60 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease; 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.socialMedia > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .socialMedia > a:hover {
   background-color: #393e46;
-  transform: translateY(-3px);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.socialMedia > a:hover::before {
+  opacity: 1;
 }
 
 .socialMedia > a > svg {
   height: 30px;
   width: auto;
+  transition: all 0.3s ease;
+}
+
+.socialMedia > a:hover > svg {
+  transform: scale(1.1);
+}
+
+/* Animation on Load */
+@media (prefers-reduced-motion: no-preference) {
+  .about-container {
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -98,7 +265,7 @@
   }
   
   .about-container {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   
   .about-text h3 {
@@ -108,6 +275,7 @@
   
   .about-text p {
     font-size: 1.1rem;
+    line-height: 1.7;
   }
 }
 
@@ -116,25 +284,32 @@
     padding: 3rem 1.5rem;
   }
   
+  .about-section::before,
+  .about-section::after {
+    width: 100px;
+    height: 100px;
+  }
+  
   .about-container {
-    padding: 1.2rem;
-    border-radius: 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
   }
   
   .about-text h3 {
     font-size: 2rem;
     line-height: 2.5rem;
+    margin: 0 0 25px 0;
   }
   
   .about-text p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: left;
     padding: 0;
   }
   
   .socialMedia {
-    gap: 15px;
+    gap: 18px;
   }
   
   .socialMedia > a {
@@ -153,12 +328,16 @@
   }
   
   .about-container {
-    padding: 1rem;
+    padding: 1.2rem;
   }
   
   .about-text h3 {
     font-size: 1.8rem;
     line-height: 2.2rem;
+  }
+  
+  .socialMedia {
+    gap: 15px;
   }
   
   .socialMedia > a {
@@ -168,5 +347,19 @@
   
   .socialMedia > a > svg {
     height: 22px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .about-container,
+  .about-container:hover,
+  .about-text h3::before,
+  .about-text h3::after,
+  .socialMedia > a:hover,
+  .socialMedia > a > svg,
+  .socialMedia > a:hover > svg {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 }

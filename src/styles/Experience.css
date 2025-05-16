@@ -7,27 +7,37 @@
   overflow: hidden;
   min-height: 100vh;
   scroll-margin-top: 100px;
+  scroll-behavior: smooth;
 }
 
 #experience > .wrapper {
   margin: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 950px;
   position: relative;
 }
 
 #experience h3 {
   text-align: center;
-  font-size: 2rem;
-  margin: 2rem 0 3rem 0;
+  font-size: 2.2rem;
+  margin: 2rem 0 3.5rem 0;
   color: #000;
   letter-spacing: 3px;
   text-transform: uppercase;
   position: relative;
+  font-weight: 700;
 }
 
 #experience h3::after {
-  content: none !important;
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background-color: #DCDCDC;
+  border-radius: 2px;
 }
 
 .experience-list {
@@ -36,97 +46,196 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
+  perspective: 1000px;
 }
 
 @media (min-width: 768px) {
   .experience-list {
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.8rem;
     flex-wrap: wrap;
   }
 
   .experience-item {
-    flex: 1 1 calc(33.333% - 1.5rem);
-    max-width: calc(33.333% - 1.5rem);
+    flex: 1 1 calc(33.333% - 1.3rem);
+    max-width: calc(33.333% - 1.3rem);
   }
 }
 
 /* Experience Card */
 .experience-item {
   background: #DCDCDC;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, rgba(220, 220, 220, 0.8), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
 }
 
 .experience-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) rotateX(4deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.experience-item:hover::before {
+  transform: scaleX(1);
 }
 
 .experience-item h4 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
   color: #222831;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.experience-item h4::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #222831;
+  transition: width 0.3s ease;
+}
+
+.experience-item:hover h4::after {
+  width: 100%;
 }
 
 .position {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
   color: #000;
+  letter-spacing: 0.5px;
 }
 
 .duration {
   font-size: 1rem;
   color: #000;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-style: italic;
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
 }
 
 .description {
   font-size: 1rem;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 0.3s ease;
+}
+
+.experience-item:hover .description {
+  padding-left: 10px;
+}
+
+/* Additional accent element */
+.experience-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50% 0 0 0;
+  transition: all 0.4s ease;
+}
+
+.experience-item:hover::after {
+  width: 50px;
+  height: 50px;
 }
 
 /* Responsive Breakpoints */
 @media only screen and (min-width: 1001px) {
   #experience {
-    padding: 12rem 0;
+    padding: 10rem 0;
   }
 
   #experience > .wrapper {
-    width: 80%;
+    width: 85%;
   }
 
   #experience h3 {
-    font-size: 2.8rem;
-    margin: 6rem 3rem 8rem 0rem;
+    font-size: 2.6rem;
+    margin: 4rem 3rem 6rem 0rem;
     letter-spacing: 5px;
   }
 
+  #experience h3::after {
+    width: 90px;
+    height: 4px;
+    bottom: -18px;
+  }
+
   .experience-list {
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .experience-item {
     padding: 2rem;
+    border-radius: 15px;
   }
 
   .experience-item h4 {
     font-size: 1.6rem;
+    margin-bottom: 0.8rem;
   }
 
   .position {
     font-size: 1.2rem;
+    letter-spacing: 0.7px;
+  }
+
+  .duration {
+    font-size: 1rem;
+    padding: 4px 14px;
   }
 
   .description {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* Tablet responsiveness */
+@media only screen and (max-width: 900px) and (min-width: 601px) {
+  .experience-list {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .experience-item {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -139,56 +248,127 @@
   #experience > .wrapper {
     width: 95%;
   }
+  
+  #experience h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0 3rem 0;
+  }
+  
+  #experience h3::after {
+    width: 50px;
+    height: 3px;
+    bottom: -12px;
+  }
+
+  .experience-list {
+    gap: 2.5rem;
+  }
 
   .experience-item {
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transform: none !important;
   }
 
   .experience-item h4 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .position {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .duration {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 3px 10px;
   }
 
   .description {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+  
+  /* Disable some hover effects on mobile */
+  .experience-item:hover {
+    transform: none;
   }
 }
 
 @media only screen and (max-width: 400px) {
   #experience {
-    padding: 3rem 0;
+    padding: 4rem 0.8rem;
   }
 
   #experience > .wrapper {
-    width: 92%;
+    width: 94%;
   }
 
   #experience h3 {
     font-size: 1.6rem;
     letter-spacing: 2px;
-    margin: 1.5rem 0 2.5rem 0;
+    margin: 1rem 0 2.5rem 0;
+  }
+  
+  #experience h3::after {
+    width: 40px;
+    height: 3px;
+  }
+
+  .experience-list {
+    gap: 1.8rem;
+  }
+
+  .experience-item {
+    padding: 1.2rem;
+    border-radius: 10px;
   }
 
   .experience-item h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
   }
 
   .position {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   .duration {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    margin-bottom: 0.8rem;
   }
 
   .description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
+}
+
+/* Animasi untuk card experience saat muncul */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.experience-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.experience-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.experience-item:nth-child(3) {
+  animation-delay: 0.6s;
 }
