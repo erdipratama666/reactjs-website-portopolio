@@ -69,6 +69,6 @@ h2 {
 
 @media (min-width: 768px) {
   .hero-img img {
-    max-width: 200px;
+    max-width: 100px;
   }
 }
