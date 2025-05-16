@@ -1,17 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import './App.css'
-import Home from './pages/Home'
+import { useState } from 'react' // Pastikan ini ada
 
-function App() {
-  return (
-    <>
-      <Helmet>
-        <title>Erdi Pratama | Web Developer</title>
-        <meta name="description" content="Portofolio Erdi Pratama, Web Developer dengan React.js" />
-      </Helmet>
-      <Home />
-    </>
-  );
+export default function App() {
+  const [state] = useState() // Test basic hook
+  return <div>Hello World</div>
 }
-
-export default App;

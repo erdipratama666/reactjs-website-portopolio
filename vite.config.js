@@ -1,78 +1,40 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
-import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
-  base: '/',
   plugins: [
     react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-runtime',
-            {
-              regenerator: true,
-            },
-          ],
-        ],
-      },
+      jsxRuntime: 'automatic',
       fastRefresh: true,
     }),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'inline',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Erdi Pratama - Web Developer Portfolio',
-        short_name: 'Erdi Pratama',
-        description: 'Portofolio Erdi Pratama, Web Developer yang berfokus pada pengembangan website modern dengan React.js',
-        theme_color: '#ffffff',
         icons: [
           {
-            src: 'logo192.png',
+            src: '/logo192.png', // Pastikan file ada di public/
             sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'logo512.png',
-            sizes: '512x512',
             type: 'image/png'
           }
         ]
       }
-    }),
-    visualizer({
-      open: true,
-      gzipSize: true,
-      brotliSize: true
     })
   ],
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react/jsx-runtime'],
+  },
   build: {
-    sourcemap: false,
-    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'helmet': ['react-helmet-async'],
-          'critical': ['./src/components/Hero.jsx', './src/components/Navbar.jsx'],
-        },
-        entryFileNames: (chunkInfo) => {
-          return chunkInfo.name.includes('critical') 
-            ? 'assets/[name]-[hash].js'
-            : 'assets/[name]-[hash].js';
+          react: ['react', 'react-dom'],
         }
       }
-    },
-    minify: 'esbuild',
-    assetsInlineLimit: 4096,
-  },
-  esbuild: {
-    jsxInject: `import React from 'react'`,
-    legalComments: 'none',
-    treeShaking: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
-  },
+    }
+  }
 })
