@@ -1,7 +1,7 @@
-// import './DetailTugas.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import '../styles/DetailTugas.css'; // Mengimpor file CSS dari folder styles
 
 export default function DetailTugas() {
   const { id } = useParams();

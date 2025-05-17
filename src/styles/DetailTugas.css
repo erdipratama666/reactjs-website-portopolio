@@ -1,46 +1,63 @@
 /* Styling untuk komponen DetailTugas.jsx */
+body, html {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
 .detail-container {
-  padding-top: 6rem; /* pt-24 */
-  padding-left: 1.5rem; /* px-6 */
+  padding-top: 6rem;
+  padding-left: 1.5rem;
   padding-right: 1.5rem;
-  max-width: 56rem; /* max-w-4xl */
+  max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 3rem;
+  background-color: #ffffff !important;
+  color: #000000;
 }
 
 .detail-heading {
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 600; /* font-semibold */
-  margin-bottom: 2rem; /* mb-8 */
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #000000;
+  text-align: center;
 }
 
 .detail-section {
-  margin-bottom: 2rem; /* mb-8 */
-  padding: 1rem; /* p-4 */
-  background-color: #f3f4f6; /* bg-gray-100 */
-  border-radius: 0.5rem; /* rounded-lg */
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .section-heading {
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: 600; /* font-semibold */
-  margin-bottom: 1rem; /* mb-4 */
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
 }
 
 .detail-paragraph {
-  margin-bottom: 1rem; /* mb-4 */
-  line-height: 1.6;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #000000;
 }
 
 .detail-list-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #000000;
 }
 
 .detail-list, .detail-ordered-list {
-  list-style-position: inside;
-  padding-left: 1.5rem; /* pl-6 */
-  margin-bottom: 1rem; /* mb-4 */
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
 }
 
 .detail-list {
@@ -52,37 +69,40 @@
 }
 
 .detail-list li, .detail-ordered-list li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   line-height: 1.6;
 }
 
 .detail-conclusion {
   font-weight: 600;
-  color: #10b981; /* text-green-500 */
-  margin-top: 1rem;
+  color: #28a745;
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-radius: 0.25rem;
 }
 
 .back-button-container {
   text-align: center;
-  margin-top: 3rem; /* mt-12 */
+  margin-top: 3rem;
 }
 
 .back-button {
-  background-color: #2563eb; /* bg-blue-600 */
+  background-color: #0d6efd;
   color: white;
-  padding-left: 1rem; /* px-4 */
-  padding-right: 1rem;
-  padding-top: 0.5rem; /* py-2 */
-  padding-bottom: 0.5rem;
-  border-radius: 0.25rem; /* rounded */
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.25rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
 }
 
 .back-button:hover {
-  background-color: #1d4ed8; /* hover:bg-blue-700 */
+  background-color: #0b5ed7;
 }
 
 /* Responsive styling untuk mobile */
@@ -90,11 +110,11 @@
   .detail-container {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 5rem;
   }
   
   .detail-heading {
     font-size: 1.5rem;
-    text-align: center;
   }
   
   .section-heading {
@@ -102,17 +122,31 @@
   }
   
   .detail-section {
-    padding: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .detail-list, .detail-ordered-list {
-    padding-left: 0.75rem;
+    padding-left: 1.25rem;
+  }
+  
+  .back-button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
   }
 }
 
 /* Additional responsiveness for larger screens */
 @media (min-width: 768px) {
+  .detail-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
   .detail-section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }

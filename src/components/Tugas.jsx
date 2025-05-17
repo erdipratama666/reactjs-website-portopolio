@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-// import './Tugas.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import '../styles/Tugas.css'; // Mengimpor file CSS dari folder styles
 
 export default function Tugas() {
   const tugasList = [

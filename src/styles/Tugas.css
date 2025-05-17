@@ -1,70 +1,105 @@
 /* Styling untuk komponen Tugas.jsx */
+body, html {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
 .tugas-container {
-  padding-top: 6rem; /* pt-24 */
-  padding-left: 1.5rem; /* px-6 */
+  padding-top: 6rem;
+  padding-left: 1.5rem;
   padding-right: 1.5rem;
-  max-width: 56rem; /* max-w-4xl */
+  max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff;
+  padding-bottom: 3rem;
+  background-color: #ffffff !important;
+  color: #000000;
 }
 
 .tugas-heading {
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 700; /* font-bold */
-  margin-bottom: 2rem; /* mb-8 */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
   text-align: center;
+  color: #000000 !important;
 }
 
 .tugas-grid {
   display: grid;
-  grid-template-columns: 1fr; /* 1 column for mobile */
-  gap: 1.5rem; /* gap-6 */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .tugas-card {
   display: block;
-  border: 1px solid #ffffff; /* border border-gray-300 */
-  border-radius: 0.75rem; /* rounded-xl */
-  padding: 1.5rem; /* p-6 */
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
-  background-color: white;
-  transition: box-shadow 0.3s, background-color 0.3s;
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .tugas-card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* hover:shadow-md */
-  background-color: #ffffff; /* hover:bg-blue-50 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  border-color: #d1d5db;
 }
 
 .tugas-title {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 600; /* font-semibold */
-  color: #1f2937; /* text-gray-800 */
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
   text-align: center;
-  transition: color 0.3s;
 }
 
 .tugas-card:hover .tugas-title {
-  color: #2563eb; /* hover:text-blue-600 */
+  color: #0d6efd;
+}
+
+/* Responsive styling untuk mobile */
+@media (max-width: 640px) {
+  .tugas-container {
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .tugas-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tugas-card {
+    padding: 1.25rem;
+  }
+  
+  .tugas-title {
+    font-size: 1.125rem;
+  }
 }
 
 /* Responsive styling for tablet and larger screens */
 @media (min-width: 768px) {
   .tugas-grid {
-    grid-template-columns: 1fr 1fr; /* 2 columns for md and up */
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .tugas-title {
-    text-align: left;
+  .tugas-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 /* Additional responsiveness for larger screens */
 @media (min-width: 1024px) {
-  .tugas-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .tugas-grid {
+    gap: 2rem;
+  }
+  
+  .tugas-card {
+    padding: 2rem;
   }
 }
