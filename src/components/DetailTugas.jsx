@@ -1,127 +1,289 @@
-import '../components/Tugas'
+// import './DetailTugas.css';
 import { useParams, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function DetailTugas() {
   const { id } = useParams();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+  
+  // Objek berisi detail tugas sesuai dengan ID
+  const tugasDetails = {
+    '1': {
+      title: 'Logika First Order dan Contoh Kasusnya',
+      sections: [
+        {
+          title: '1. Pelajari Logika First Order dan Contoh Kasusnya',
+          content: [
+            {
+              type: 'paragraph',
+              text: 'Pengertian: Logika First Order (First Order Logic/FOL) adalah sistem logika yang menggunakan predikat, kuantor, dan variabel untuk menyatakan fakta tentang objek di dunia nyata.'
+            },
+            {
+              type: 'list-title',
+              text: 'Ciri-ciri utama:'
+            },
+            {
+              type: 'list',
+              items: [
+                'Memiliki kuantor universal (∀) dan eksistensial (∃)',
+                'Menyatakan sifat objek dengan predikat (misalnya: Manusia(x))',
+                'Digunakan dalam AI, basis data, sistem pakar, dll'
+              ]
+            },
+            {
+              type: 'list-title',
+              text: 'Contoh kasus:'
+            },
+            {
+              type: 'list',
+              items: [
+                '∀x (Demam(x) ∧ Batuk(x) → Flu(x)) → Semua yang demam dan batuk menderita flu',
+                '∀x (Anggota(x) → ∃y (Meminjam(x, y))) → Setiap anggota perpustakaan meminjam setidaknya satu buku'
+              ]
+            }
+          ]
+        },
+        {
+          title: '2. Menuliskan Ekspresi dalam Logika First Order',
+          content: [
+            {
+              type: 'list-title',
+              text: 'Pernyataan yang diberikan:'
+            },
+            {
+              type: 'list',
+              items: [
+                'Semua mahasiswa informatika suka kecerdasan buatan',
+                'Setiap yang paham pemrograman suka kecerdasan buatan'
+              ]
+            },
+            {
+              type: 'paragraph',
+              text: 'Kesimpulan: Semua mahasiswa ilmu komputer paham pemrograman'
+            },
+            {
+              type: 'list-title',
+              text: 'Notasi:'
+            },
+            {
+              type: 'list',
+              items: [
+                'M(x): x adalah mahasiswa informatika',
+                'C(x): x suka kecerdasan buatan',
+                'P(x): x paham pemrograman',
+                'K(x): x adalah mahasiswa ilmu komputer'
+              ]
+            },
+            {
+              type: 'list-title',
+              text: 'Terjemahan dalam FOL:'
+            },
+            {
+              type: 'list',
+              items: [
+                '∀x (M(x) → C(x))',
+                '∀x (P(x) → C(x))'
+              ]
+            },
+            {
+              type: 'paragraph',
+              text: 'Kesimpulan: ∀x (K(x) → P(x))'
+            },
+            {
+              type: 'paragraph',
+              text: 'Evaluasi Kesimpulan: Tidak valid. Kita hanya tahu bahwa dua kelompok berbeda (mahasiswa informatika dan yang paham pemrograman) menyukai hal yang sama, yaitu kecerdasan buatan. Tidak ada hubungan logis yang membuktikan bahwa mahasiswa ilmu komputer paham pemrograman hanya dari dua premis di atas.'
+            }
+          ]
+        },
+        {
+          title: '3. Konversi Kalimat ke Logika First Order dan Pembuktian',
+          content: [
+            {
+              type: 'list-title',
+              text: 'Pernyataan yang diberikan:'
+            },
+            {
+              type: 'list',
+              items: [
+                'Setiap apel atau pear adalah buah',
+                'Setiap buah memiliki warna kuning atau hijau atau merah',
+                'Tidak ada pear berwarna merah',
+                'Setiap buah manis tidak berwarna hijau'
+              ]
+            },
+            {
+              type: 'list-title',
+              text: 'Notasi:'
+            },
+            {
+              type: 'list',
+              items: [
+                'A(x): x adalah apel',
+                'R(x): x adalah pear',
+                'B(x): x adalah buah',
+                'W(x,y): x berwarna y',
+                'S(x): x manis'
+              ]
+            },
+            {
+              type: 'list-title',
+              text: 'Terjemahan dalam FOL:'
+            },
+            {
+              type: 'list',
+              items: [
+                '∀x ((A(x) ∨ R(x)) → B(x))',
+                '∀x (B(x) → (W(x,kuning) ∨ W(x,hijau) ∨ W(x,merah)))',
+                '∀x (R(x) → ¬W(x,merah))',
+                '∀x ((B(x) ∧ S(x)) → ¬W(x,hijau))'
+              ]
+            },
+            {
+              type: 'paragraph',
+              text: 'Pernyataan yang ingin dibuktikan: Jika pear tidak kuning maka pear tidak manis'
+            },
+            {
+              type: 'paragraph',
+              text: 'Dalam logika: ∀x (R(x) ∧ ¬W(x,kuning) → ¬S(x))'
+            },
+            {
+              type: 'list-title',
+              text: 'Pembuktian langkah demi langkah:'
+            },
+            {
+              type: 'ordered-list',
+              items: [
+                'Asumsikan x adalah pear dan tidak kuning → R(x) ∧ ¬W(x,kuning)',
+                'Dari (1): pear adalah buah → B(x)',
+                'Dari (2): karena buah harus berwarna kuning, hijau, atau merah, dan pear tidak boleh merah (3), dan tidak kuning → maka W(x,hijau)',
+                'Dari (4): jika buah berwarna hijau → tidak manis → W(x,hijau) → ¬S(x)',
+                'Karena pear berwarna hijau → pear tidak manis'
+              ]
+            },
+            {
+              type: 'conclusion',
+              text: 'Kesimpulan: ✅ Pernyataan "Jika pear tidak kuning maka pear tidak manis" adalah BENAR dan terbukti logis dari premis yang ada.'
+            }
+          ]
+        }
+      ]
+    },
+    '2': {
+      title: 'Menuliskan Ekspresi dalam Logika',
+      sections: [
+        {
+          title: '1. Pernyataan Logika',
+          content: [
+            {
+              type: 'paragraph',
+              text: 'Ekspresi logika adalah cara formal untuk menulis pernyataan yang bernilai benar atau salah.'
+            }
+          ]
+        }
+      ]
+    },
+    '3': {
+      title: 'Konversi Kalimat ke Logika',
+      sections: [
+        {
+          title: '1. Konversi Kalimat',
+          content: [
+            {
+              type: 'paragraph',
+              text: 'Konversi kalimat bahasa natural ke dalam bentuk logika first order.'
+            }
+          ]
+        }
+      ]
+    },
+    '4': {
+      title: 'Pembuktian dengan Logika First Order',
+      sections: [
+        {
+          title: '1. Pembuktian',
+          content: [
+            {
+              type: 'paragraph',
+              text: 'Metode pembuktian dalam logika first order.'
+            }
+          ]
+        }
+      ]
+    }
+  };
+  
+  // Mengambil detail tugas berdasarkan ID
+  const currentTugas = tugasDetails[id];
+  
+  // Jika ID tidak ditemukan, tampilkan pesan
+  if (!currentTugas) {
+    return (
+      <>
+        <Navbar />
+        <div className="detail-container">
+          <h2 className="detail-heading">Tugas tidak ditemukan</h2>
+          <button
+            onClick={() => navigate('/tugas')}
+            className="back-button"
+          >
+            ← Kembali ke Daftar Tugas
+          </button>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   return (
-    <div className="pt-24 px-6 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-semibold mb-8">Detail Tugas ID: {id}</h2>
-
-      {/* Section 1 */}
-      <div className="mb-8 p-4 bg-gray-100 rounded-lg">
-        <h3 className="text-2xl font-semibold mb-4">1. Pelajari Logika First Order dan Contoh Kasusnya</h3>
-        <p className="mb-4">
-          <strong>Pengertian:</strong> Logika First Order (First Order Logic/FOL) adalah sistem logika yang menggunakan predikat, kuantor, dan variabel untuk menyatakan fakta tentang objek di dunia nyata.
-        </p>
-        <p className="mb-4">
-          <strong>Ciri-ciri utama:</strong>
-          <ul className="list-disc pl-6">
-            <li>Memiliki kuantor universal (∀) dan eksistensial (∃)</li>
-            <li>Menyatakan sifat objek dengan predikat (misalnya: Manusia(x))</li>
-            <li>Digunakan dalam AI, basis data, sistem pakar, dll</li>
-          </ul>
-        </p>
-        <p className="mb-4">
-          <strong>Contoh kasus:</strong>
-          <ul className="list-disc pl-6">
-            <li>∀x (Demam(x) ∧ Batuk(x) → Flu(x)) → Semua yang demam dan batuk menderita flu</li>
-            <li>∀x (Anggota(x) → ∃y (Meminjam(x, y))) → Setiap anggota perpustakaan meminjam setidaknya satu buku</li>
-          </ul>
-        </p>
-      </div>
-
-      {/* Section 2 */}
-      <div className="mb-8 p-4 bg-gray-100 rounded-lg">
-        <h3 className="text-2xl font-semibold mb-4">2. Menuliskan Ekspresi dalam Logika First Order</h3>
-        <p className="mb-4">
-          <strong>Pernyataan yang diberikan:</strong>
-        </p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Semua mahasiswa informatika suka kecerdasan buatan</li>
-          <li>Setiap yang paham pemrograman suka kecerdasan buatan</li>
-        </ul>
-        <p className="mb-4"><strong>Kesimpulan:</strong> Semua mahasiswa ilmu komputer paham pemrograman</p>
-        <p className="mb-4">
-          <strong>Notasi:</strong>
-          <ul className="list-disc pl-6">
-            <li>M(x): x adalah mahasiswa informatika</li>
-            <li>C(x): x suka kecerdasan buatan</li>
-            <li>P(x): x paham pemrograman</li>
-            <li>K(x): x adalah mahasiswa ilmu komputer</li>
-          </ul>
-        </p>
-        <p className="mb-4">
-          <strong>Terjemahan dalam FOL:</strong>
-          <ul className="list-disc pl-6">
-            <li>∀x (M(x) → C(x))</li>
-            <li>∀x (P(x) → C(x))</li>
-          </ul>
-        </p>
-        <p className="mb-4">
-          <strong>Kesimpulan:</strong> ∀x (K(x) → P(x))<br />
-          Evaluasi Kesimpulan: Tidak valid. Kita hanya tahu bahwa dua kelompok berbeda (mahasiswa informatika dan yang paham pemrograman) menyukai hal yang sama, yaitu kecerdasan buatan. Tidak ada hubungan logis yang membuktikan bahwa mahasiswa ilmu komputer paham pemrograman hanya dari dua premis di atas.
-        </p>
-      </div>
-
-      {/* Section 3 */}
-      <div className="mb-8 p-4 bg-gray-100 rounded-lg">
-        <h3 className="text-2xl font-semibold mb-4">3. Konversi Kalimat ke Logika First Order dan Pembuktian</h3>
-        <p className="mb-4">
-          <strong>Pernyataan yang diberikan:</strong>
-        </p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Setiap apel atau pear adalah buah</li>
-          <li>Setiap buah memiliki warna kuning atau hijau atau merah</li>
-          <li>Tidak ada pear berwarna merah</li>
-          <li>Setiap buah manis tidak berwarna hijau</li>
-        </ul>
-        <p className="mb-4">
-          <strong>Notasi:</strong>
-          <ul className="list-disc pl-6">
-            <li>A(x): x adalah apel</li>
-            <li>R(x): x adalah pear</li>
-            <li>B(x): x adalah buah</li>
-            <li>W(x,y): x berwarna y</li>
-            <li>S(x): x manis</li>
-          </ul>
-        </p>
-        <p className="mb-4">
-          <strong>Terjemahan dalam FOL:</strong>
-          <ul className="list-disc pl-6">
-            <li>∀x ((A(x) ∨ R(x)) → B(x))</li>
-            <li>∀x (B(x) → (W(x,kuning) ∨ W(x,hijau) ∨ W(x,merah)))</li>
-            <li>∀x (R(x) → ¬W(x,merah))</li>
-            <li>∀x ((B(x) ∧ S(x)) → ¬W(x,hijau))</li>
-          </ul>
-        </p>
-        <p className="mb-4">
-          <strong>Pernyataan yang ingin dibuktikan:</strong> Jika pear tidak kuning maka pear tidak manis<br />
-          Dalam logika: ∀x (R(x) ∧ ¬W(x,kuning) → ¬S(x))
-        </p>
-        <p className="mb-4">
-          <strong>Pembuktian langkah demi langkah:</strong>
-          <ul className="list-decimal pl-6">
-            <li>Asumsikan x adalah pear dan tidak kuning → R(x) ∧ ¬W(x,kuning)</li>
-            <li>Dari (1): pear adalah buah → B(x)</li>
-            <li>Dari (2): karena buah harus berwarna kuning, hijau, atau merah, dan pear tidak boleh merah (3), dan tidak kuning → maka W(x,hijau)</li>
-            <li>Dari (4): jika buah berwarna hijau → tidak manis → W(x,hijau) → ¬S(x)</li>
-            <li>Karena pear berwarna hijau → pear tidak manis</li>
-          </ul>
-        </p>
-        <p className="font-semibold text-green-500">Kesimpulan: ✅ Pernyataan "Jika pear tidak kuning maka pear tidak manis" adalah BENAR dan terbukti logis dari premis yang ada.</p>
-
-        {/* Tombol kembali */}
-        <div className="text-center mt-12">
+    <>
+      <Navbar />
+      <div className="detail-container">
+        <h2 className="detail-heading">Tugas {id}: {currentTugas.title}</h2>
+        
+        {currentTugas.sections.map((section, index) => (
+          <div key={index} className="detail-section">
+            <h3 className="section-heading">{section.title}</h3>
+            
+            {section.content.map((item, contentIndex) => {
+              if (item.type === 'paragraph') {
+                return <p key={contentIndex} className="detail-paragraph">{item.text}</p>;
+              } else if (item.type === 'list-title') {
+                return <p key={contentIndex} className="detail-list-title"><strong>{item.text}</strong></p>;
+              } else if (item.type === 'list') {
+                return (
+                  <ul key={contentIndex} className="detail-list">
+                    {item.items.map((listItem, listIndex) => (
+                      <li key={listIndex}>{listItem}</li>
+                    ))}
+                  </ul>
+                );
+              } else if (item.type === 'ordered-list') {
+                return (
+                  <ol key={contentIndex} className="detail-ordered-list">
+                    {item.items.map((listItem, listIndex) => (
+                      <li key={listIndex}>{listItem}</li>
+                    ))}
+                  </ol>
+                );
+              } else if (item.type === 'conclusion') {
+                return <p key={contentIndex} className="detail-conclusion">{item.text}</p>;
+              }
+              return null;
+            })}
+          </div>
+        ))}
+        
+        <div className="back-button-container">
           <button
-            onClick={() => navigate(-1)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            onClick={() => navigate('/tugas')}
+            className="back-button"
           >
-            ← Kembali
+            ← Kembali ke Daftar Tugas
           </button>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

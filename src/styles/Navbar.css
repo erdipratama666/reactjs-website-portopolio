@@ -141,6 +141,50 @@
   border-radius: 3px;
 }
 
+/* Style untuk tombol yang dipakai sebagai link di Navbar */
+.link-button {
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 0; /* sesuaikan dengan link lain */
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.link-button:hover {
+  color: #555;
+  transform: translateY(-2px);
+}
+
+.link-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #333;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.link-button:hover::after {
+  width: 100%;
+}
+
+/* Optional: hilangkan focus outline default tapi buat custom agar aksesibilitas tetap */
+.link-button:focus {
+  outline: 2px dashed #333;
+  outline-offset: 4px;
+}
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
