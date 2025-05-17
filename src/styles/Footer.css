@@ -1,7 +1,67 @@
 footer {
   background-color: #DCDCDC;
   text-align: center;
-  line-height: 100px;
+  padding: 20px 0;
   color: #000000;
   letter-spacing: 5px;
+  font-weight: 500;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15), transparent);
+}
+
+footer:hover {
+  letter-spacing: 6px;
+  transform: translateY(-2px);
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animasi untuk copyright */
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+footer span {
+  display: inline-block;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Responsivitas untuk mobile */
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 15px 0;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+  }
+  
+  footer:hover {
+    letter-spacing: 3.5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 12px 0;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+  }
+  
+  footer:hover {
+    letter-spacing: 2.5px;
+  }
 }

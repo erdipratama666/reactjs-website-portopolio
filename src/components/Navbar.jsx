@@ -34,6 +34,7 @@ function Navbar() {
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
+          <span className="bar"></span>
         </button>
         
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
@@ -41,6 +42,7 @@ function Navbar() {
             <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
             <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
             <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
+            <li><a href="#tugas" onClick={() => setMenuOpen(false)}>Tugas</a></li>
           </ul>
         </div>
       </div>
