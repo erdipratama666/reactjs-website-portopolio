@@ -1,7 +1,7 @@
 #portfolio {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: relative;
-  padding: 8rem 0;
+  padding: 4rem 6rem;
   font-family: "Kanit", sans-serif;
   margin: 0;
   overflow: hidden;
@@ -14,7 +14,7 @@
   font-size: 2.8rem;
   margin: 0 auto 4rem auto;
   padding: 0;
-  color: #000000 !important; 
+  color: #000000 ; 
   letter-spacing: 5px;
   text-transform: uppercase;
   width: 100%;
@@ -22,16 +22,13 @@
   font-weight: 700;
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #DCDCDC;
-  border-radius: 2px;
+h1.section-title,
+h2.section-title,
+h3.section-title,
+h4.section-title,
+h5.section-title,
+h6.section-title {
+  color: #000000 !important;
 }
 
 .portfolio-content {
@@ -215,25 +212,12 @@
   }
 }
 
-/* Corner decoration */
-.project::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 40px 40px 0;
-  border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
-  transition: all 0.3s ease;
-}
+
 
 .project:hover::after {
   border-width: 0 60px 60px 0;
 }
 
-/* Responsive Design */
 
 @media only screen and (min-width: 1001px) {
   #portfolio {

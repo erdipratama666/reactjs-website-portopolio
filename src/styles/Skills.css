@@ -9,7 +9,7 @@
 }
 
 .skills-section::before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   top: 0;
   right: 0;
@@ -20,16 +20,16 @@
   z-index: 1;
 }
 
-.section-title-container {
+/* .section-title-container {
   margin-bottom: 2rem;
   position: relative;
   text-align: center;
-}
+} */
 
 .section-title {
   display: inline-block;
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -38,22 +38,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #ffffff, transparent);
-  transition: width 0.3s ease;
-}
-
-.section-title-container:hover .section-title::after {
-  width: 120px;
 }
 
 .tabs {
@@ -80,7 +64,7 @@
 }
 
 .tabs button::before {
-  content: '';
+  /* content: ''; */
   position: absolute;
   top: 0;
   left: 0;

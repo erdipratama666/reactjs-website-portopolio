@@ -6,9 +6,9 @@ import '../styles/Tugas.css'; // Mengimpor file CSS dari folder styles
 export default function Tugas() {
   const tugasList = [
     { id: '1', title: 'Tugas 1: Logika First Order' },
-    { id: '2', title: 'Tugas 2: Menuliskan Ekspresi dalam Logika' },
-    { id: '3', title: 'Tugas 3: Konversi Kalimat ke Logika' },
-    { id: '4', title: 'Tugas 4: Pembuktian dengan Logika First Order' },
+    { id: '2', title: 'Tugas 2: Coming Soon' },
+    { id: '3', title: 'Tugas 3: Coming Soon' },
+    { id: '4', title: 'Tugas 4: Coming Soon' },
     // Tambahkan tugas lainnya di sini
   ];
 

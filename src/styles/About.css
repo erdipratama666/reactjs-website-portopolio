@@ -33,9 +33,9 @@
 
 .about-container {
   background-color: #1a1a1a;
-  padding: 3rem 2.5rem;
+  padding: 1.6rem 2rem;
   border-radius: 12px;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -95,8 +95,6 @@
   line-height: 3rem;
   text-transform: uppercase;
   text-align: center;
-  position: relative;
-  display: inline-block;
   letter-spacing: 2px;
   background: linear-gradient(to right, #fff, #ccc, #fff);
   -webkit-background-clip: text;
@@ -104,7 +102,7 @@
   background-clip: text;
 }
 
-.about-text h3::before {
+/* .about-text h3::before {
   content: '';
   position: absolute;
   width: 30px;
@@ -127,7 +125,7 @@
   left: 20%;
   transform-origin: center;
   animation: widthExpand 1s ease forwards;
-}
+} */
 
 @keyframes widthExpand {
   from {
@@ -180,10 +178,10 @@
   gap: 25px;
   justify-content: center;
   margin-top: 30px;
-  position: relative;
+
 }
 
-.socialMedia::before {
+/* .socialMedia::before {
   content: "";
   position: absolute;
   top: -20px;
@@ -192,7 +190,7 @@
   width: 50px;
   height: 1px;
   background: linear-gradient(to right, transparent, #fff, transparent);
-}
+} */
 
 .socialMedia > a {
   background-color: #222831;
@@ -209,7 +207,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.socialMedia > a::before {
+/* .socialMedia > a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -219,7 +217,7 @@
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
   opacity: 0;
   transition: opacity 0.4s ease;
-}
+} */
 
 .socialMedia > a:hover {
   background-color: #393e46;

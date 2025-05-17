@@ -15,14 +15,11 @@ function Navbar() {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
   }, [menuOpen]);
 
-  // Fungsi untuk navigasi dan scroll ke id
   const handleScrollTo = (id) => {
     setMenuOpen(false);
     if (location.pathname !== '/') {
-      // Jika bukan di home, navigasi dulu ke home lalu scroll dengan delay
       navigate(`/#${id}`);
     } else {
-      // Jika sudah di home, scroll langsung
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });

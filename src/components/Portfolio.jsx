@@ -3,7 +3,12 @@ import '../styles/Portfolio.css';
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h1 className="section-title black-tittle">Portfolio</h1>
+      <h3 
+  className="section-title" 
+  style={{ color: '#000000' }}
+>
+  Portfolio
+</h3>
       <div className="portfolio-content">
         <div className="project-list">
           <div className="project">

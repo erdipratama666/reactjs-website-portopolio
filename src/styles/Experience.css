@@ -28,17 +28,6 @@
   font-weight: 700;
 }
 
-#experience h3::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 4px;
-  background-color: #DCDCDC;
-  border-radius: 2px;
-}
 
 .experience-list {
   list-style: none;
@@ -155,18 +144,6 @@
   padding-left: 10px;
 }
 
-/* Additional accent element */
-.experience-item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50% 0 0 0;
-  transition: all 0.4s ease;
-}
 
 .experience-item:hover::after {
   width: 50px;

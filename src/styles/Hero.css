@@ -129,21 +129,8 @@ h2::after {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.hero-img::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  animation: pulse 2s infinite;
-  z-index: -1;
-}
-
 .hero-img img:hover {
-  transform: scale(1.08) rotate(5deg);
+  transform: scale(1) rotate(6deg);
   will-change: transform;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   border-width: 5px;
@@ -233,7 +220,7 @@ h2::after {
 /* Mobile Enhancements */
 @media (max-width: 480px) {
   .hero {
-    padding: 2rem 1rem 3rem;
+    padding: 3rem ;
   }
   
   h1 {
@@ -249,7 +236,7 @@ h2::after {
   }
   
   .hero-img img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 }

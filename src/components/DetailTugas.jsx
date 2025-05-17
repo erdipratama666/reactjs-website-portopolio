@@ -170,42 +170,42 @@ export default function DetailTugas() {
       ]
     },
     '2': {
-      title: 'Menuliskan Ekspresi dalam Logika',
+      title: 'Coming Soon',
       sections: [
         {
-          title: '1. Pernyataan Logika',
+          title: '1. Coming Soon',
           content: [
             {
               type: 'paragraph',
-              text: 'Ekspresi logika adalah cara formal untuk menulis pernyataan yang bernilai benar atau salah.'
+              text: 'Coming Soon'
             }
           ]
         }
       ]
     },
     '3': {
-      title: 'Konversi Kalimat ke Logika',
+      title: 'Coming Soon',
       sections: [
         {
-          title: '1. Konversi Kalimat',
+          title: '1.Coming Soon',
           content: [
             {
               type: 'paragraph',
-              text: 'Konversi kalimat bahasa natural ke dalam bentuk logika first order.'
+              text: 'Coming Soon.'
             }
           ]
         }
       ]
     },
     '4': {
-      title: 'Pembuktian dengan Logika First Order',
+      title: 'Coming Soon',
       sections: [
         {
-          title: '1. Pembuktian',
+          title: '1. Coming Soon',
           content: [
             {
               type: 'paragraph',
-              text: 'Metode pembuktian dalam logika first order.'
+              text: 'Coming Soon.'
             }
           ]
         }

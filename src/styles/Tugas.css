@@ -1,4 +1,4 @@
-/* Styling untuk komponen Tugas.jsx */
+
 body, html {
   background-color: #ffffff !important;
   margin: 0;
@@ -18,7 +18,7 @@ body, html {
 }
 
 .tugas-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
   text-align: center;

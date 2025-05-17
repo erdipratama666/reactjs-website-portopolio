@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import '../styles/Experience.css';
 
 function Experience() {
@@ -21,6 +22,27 @@ function Experience() {
       description: "Designed user-friendly interfaces for web and mobile apps.",
     },
   ];
+
+  useEffect(() => {
+    const titleElement = document.querySelector('#experience h3');
+    
+    if (titleElement) {
+      const styleEl = document.createElement('style');
+      
+      styleEl.textContent = `
+        #experience h3::after {
+          content: none !important;
+          display: none !important;
+        }
+      `;
+      
+      document.head.appendChild(styleEl);
+      
+      return () => {
+        document.head.removeChild(styleEl);
+      };
+    }
+  }, []); 
 
   return (
     <section id="experience">
