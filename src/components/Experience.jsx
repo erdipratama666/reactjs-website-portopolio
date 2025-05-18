@@ -8,12 +8,12 @@ function Experience() {
       company: "Zamal Collection",
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Dev Studio",
+      title: "Coming Soon",
+      company: "Coming Soon",
     },
     {
-      title: "UI/UX Designer",
-      company: "Visionary Tech",
+      title: "Coming Soon",
+      company: "Coming Soon",
     },
   ];
 

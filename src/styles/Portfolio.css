@@ -191,7 +191,6 @@
   width: 100%;
 }
 
-/* Animasi untuk project saat muncul */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -270,7 +269,6 @@
     padding: 14px 28px;
   }
   
-  /* Disable some animations to improve performance */
   .portfolio-content::before,
   .portfolio-content::after {
     display: none;
@@ -375,7 +373,7 @@
 
 @media only screen and (max-width: 400px) {
   #portfolio {
-    padding: 10rem 0;
+    padding: 8rem 0;
   }
   
   .section-title {
