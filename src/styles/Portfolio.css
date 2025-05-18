@@ -221,11 +221,11 @@ h6.section-title {
 
 @media only screen and (min-width: 1001px) {
   #portfolio {
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
   
   .portfolio-content {
-    width: 75%;
+    width: 65%;
   }
   
   .section-title {
@@ -233,7 +233,7 @@ h6.section-title {
   }
   
   .project {
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 15px;
   }
   
@@ -384,7 +384,7 @@ h6.section-title {
 
 @media only screen and (max-width: 400px) {
   #portfolio {
-    padding: 4rem 0;
+    padding: 10rem 0;
   }
   
   .section-title {

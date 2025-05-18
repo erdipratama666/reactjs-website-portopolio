@@ -227,7 +227,7 @@
 
 @media screen and (max-width: 480px) {
   .skills-section {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
   }
   
   .section-title {

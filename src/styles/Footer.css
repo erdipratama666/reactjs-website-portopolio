@@ -26,7 +26,7 @@ footer span {
 /* Responsivitas untuk mobile */
 @media screen and (max-width: 768px) {
   footer {
-    padding: 15px 0;
+    padding: 2rem;
     letter-spacing: 3px;
     font-size: 0.9rem;
   }
@@ -38,7 +38,7 @@ footer span {
 
 @media screen and (max-width: 480px) {
   footer {
-    padding: 12px 0;
+    padding: 2rem;
     letter-spacing: 2px;
     font-size: 0.8rem;
   }
