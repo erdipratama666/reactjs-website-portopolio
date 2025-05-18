@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../styles/Tugas.css'; // Mengimpor file CSS dari folder styles
+import '../styles/Tugas.css'; 
 
 export default function Tugas() {
   const tugasList = [
@@ -9,7 +9,6 @@ export default function Tugas() {
     { id: '2', title: 'Tugas 2: Coming Soon' },
     { id: '3', title: 'Tugas 3: Coming Soon' },
     { id: '4', title: 'Tugas 4: Coming Soon' },
-    // Tambahkan tugas lainnya di sini
   ];
 
   return (

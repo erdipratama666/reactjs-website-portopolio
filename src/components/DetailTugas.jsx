@@ -1,13 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../styles/DetailTugas.css'; // Mengimpor file CSS dari folder styles
+import '../styles/DetailTugas.css'; 
 
 export default function DetailTugas() {
   const { id } = useParams();
   const navigate = useNavigate();
   
-  // Objek berisi detail tugas sesuai dengan ID
   const tugasDetails = {
     '1': {
       title: 'Logika First Order dan Contoh Kasusnya',
@@ -213,10 +212,8 @@ export default function DetailTugas() {
     }
   };
   
-  // Mengambil detail tugas berdasarkan ID
   const currentTugas = tugasDetails[id];
   
-  // Jika ID tidak ditemukan, tampilkan pesan
   if (!currentTugas) {
     return (
       <>

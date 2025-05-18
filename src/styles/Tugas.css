@@ -61,9 +61,10 @@ body, html {
 
 @media (max-width: 640px) {
   .tugas-container {
-    padding-top: 2rem;
+    padding-top: 0rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 5rem;
   }
   
   .tugas-heading {

@@ -7,30 +7,6 @@
   overflow: hidden;
 }
 
-.about-section::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-  z-index: 1;
-}
-
-.about-section::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: -30px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-  z-index: 1;
-}
-
 .about-container {
   background-color: #1a1a1a;
   padding: 1.6rem 2rem;
@@ -57,7 +33,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.055), transparent);
   z-index: -1;
   border-radius: 14px;
   opacity: 0;
@@ -96,7 +72,7 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  background: linear-gradient(to right, #fff, #ccc, #fff);
+  background: linear-gradient(to right, #fff, #ffffff, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -127,7 +103,7 @@
   animation: widthExpand 1s ease forwards;
 } */
 
-@keyframes widthExpand {
+/* @keyframes widthExpand {
   from {
     width: 0;
     opacity: 0;
@@ -149,7 +125,7 @@
     width: 30px;
     opacity: 1;
   }
-}
+} */
 
 .about-text p {
   padding: 5px;
@@ -165,11 +141,6 @@
 
 .about-text p:hover {
   opacity: 1;
-}
-
-.about-text p::first-letter {
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 .socialMedia {
@@ -239,8 +210,7 @@
   transform: scale(1.1);
 }
 
-/* Animation on Load */
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .about-container {
     animation: fadeInUp 0.8s ease forwards;
   }
@@ -255,7 +225,7 @@
       transform: translateY(0);
     }
   }
-}
+} */
 
 @media only screen and (max-width: 900px) {
   .about-section {

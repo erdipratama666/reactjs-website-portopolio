@@ -20,11 +20,11 @@
   z-index: 1;
 }
 
-/* .section-title-container {
-  margin-bottom: 2rem;
+.section-title-container {
+  margin-bottom: 1rem;
   position: relative;
   text-align: center;
-} */
+}
 
 .section-title {
   display: inline-block;
@@ -34,7 +34,7 @@
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background: linear-gradient(to right, #fff, #ccc, #fff);
+  background: linear-gradient(to right, #fff, #ffffff, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -135,11 +135,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.skill-card:hover::before {
-  opacity: 1;
-}
-
-/* Animation on load */
 @media (prefers-reduced-motion: no-preference) {
   .skill-card {
     opacity: 0;
@@ -227,7 +222,7 @@
 
 @media screen and (max-width: 480px) {
   .skills-section {
-    padding: 0rem 1rem;
+    padding: 2rem 1rem;
   }
   
   .section-title {

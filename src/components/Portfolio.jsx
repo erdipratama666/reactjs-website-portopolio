@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h3 
-  className="section-title" 
+  className="section-tittle" 
   style={{ color: '#000000' }}
 >
   Portfolio

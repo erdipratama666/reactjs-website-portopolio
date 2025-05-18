@@ -9,26 +9,17 @@
   scroll-behavior: smooth;
 }
 
-.section-title {
+.section-tittle {
   text-align: center;
   font-size: 2.8rem;
   margin: 0 auto 4rem auto;
   padding: 0;
-  color: #000000 ; 
+  color: #000000 !important; 
   letter-spacing: 5px;
   text-transform: uppercase;
   width: 100%;
   position: relative;
   font-weight: 700;
-}
-
-h1.section-title,
-h2.section-title,
-h3.section-title,
-h4.section-title,
-h5.section-title,
-h6.section-title {
-  color: #000000 !important;
 }
 
 .portfolio-content {
