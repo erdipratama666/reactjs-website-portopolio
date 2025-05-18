@@ -30,7 +30,6 @@ export default function Tugas() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -105,7 +105,6 @@ body, html {
   background-color: #0b5ed7;
 }
 
-/* Responsive styling untuk mobile */
 @media (max-width: 640px) {
   .detail-container {
     padding-left: 1rem;
@@ -139,9 +138,9 @@ body, html {
   }
 }
 
-/* Additional responsiveness for larger screens */
 @media (min-width: 768px) {
   .detail-container {
+    padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }

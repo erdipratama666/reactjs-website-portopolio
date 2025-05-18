@@ -8,12 +8,12 @@ function Experience() {
       company: "Zamal Collection",
     },
     {
-      title: "Coming Soon",
-      company: "Coming Soon",
+      title: "Documentation",
+      company: "Project MA AS-Siroji",
     },
     {
-      title: "Coming Soon",
-      company: "Coming Soon",
+      title: "Administration",
+      company: "Karang Taruna",
     },
   ];
 

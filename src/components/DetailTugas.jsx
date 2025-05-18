@@ -280,7 +280,6 @@ export default function DetailTugas() {
           </button>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
