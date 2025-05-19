@@ -37,7 +37,7 @@ function About() {
       <SEO
         title="About | Erdi Pratama"
         description="Tentang Erdi Pratama, Mahasiswa & Web Developer yang aktif di pengembangan web modern."
-        url="/about"
+        url="/" // Perbaikan: gunakan url="/" untuk canonical section
       />
       <section
         id="about"

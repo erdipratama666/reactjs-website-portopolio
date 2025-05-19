@@ -44,7 +44,7 @@ function Experience() {
       <SEO
         title="Experience | Erdi Pratama"
         description="Pengalaman kerja dan organisasi Erdi Pratama sebagai Content Creator, Dokumentasi, dan Administrasi."
-        url="/experience"
+        url="/" // Perbaikan: gunakan url="/" untuk canonical section
       />
       <section
         id="experience"

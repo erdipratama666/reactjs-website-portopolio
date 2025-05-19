@@ -7,7 +7,7 @@ const Portfolio = () => {
       <SEO
         title="Portfolio | Erdi Pratama"
         description="Kumpulan projek website karya Erdi Pratama, termasuk website sekolah, aplikasi web, dan lainnya."
-        url="/#portfolio"
+        url="/" // Perbaiki: jangan gunakan hash di canonical url
       />
       <section id="portfolio">
         <h3 

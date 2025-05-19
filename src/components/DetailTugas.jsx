@@ -295,6 +295,7 @@ export default function DetailTugas() {
           </button>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

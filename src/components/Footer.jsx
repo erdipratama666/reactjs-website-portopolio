@@ -1,11 +1,11 @@
-import '../styles/Footer.css'
+import '../styles/Footer.css';
 
 function Footer() {
   return (
     <footer>
-      <span>&copy; Erdi Pratama 2025</span>
+      <span>&copy; {new Date().getFullYear()} Erdi Pratama</span>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
