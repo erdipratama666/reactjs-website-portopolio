@@ -4,7 +4,12 @@ import avatar from '../assets/profile-picture.png';
 const Hero = () => {
   return (
     <>
-      <section className="hero" data-testid="hero-section">
+      <section
+        className="hero"
+        data-testid="hero-section"
+        itemScope
+        itemType="https://schema.org/Person"
+      >
         <div className="hero-text">
           <p className="intro">Hi, I'm</p>
           <h1 itemProp="name">Erdi Pratama</h1>

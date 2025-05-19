@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from './SEO';
 import '../styles/Experience.css';
 
 function Experience() {
@@ -18,13 +19,13 @@ function Experience() {
   ];
 
   useEffect(() => {
-    const titleElement = document.querySelector('#experience h3');
+    const titleElement = document.querySelector('#experience h2');
 
     if (titleElement) {
       const styleEl = document.createElement('style');
 
       styleEl.textContent = `
-        #experience h3::after {
+        #experience h2::after {
           content: none !important;
           display: none !important;
         }
@@ -39,19 +40,37 @@ function Experience() {
   }, []);
 
   return (
-    <section id="experience">
-      <div className="wrapper">
-        <h3>Experience</h3>
-        <ul className="experience-list">
-          {experienceData.map((job, index) => (
-            <li className="experience-item" key={index}>
-              <h4>{job.title}</h4>
-              <p className="position">{job.company}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <>
+      <SEO
+        title="Experience | Erdi Pratama"
+        description="Pengalaman kerja dan organisasi Erdi Pratama sebagai Content Creator, Dokumentasi, dan Administrasi."
+        url="/experience"
+      />
+      <section
+        id="experience"
+        itemScope
+        itemType="https://schema.org/ItemList"
+        className="experience-section"
+      >
+        <div className="wrapper">
+          <h2 itemProp="name">Experience</h2>
+          <ul className="experience-list">
+            {experienceData.map((job, index) => (
+              <li
+                className="experience-item"
+                key={index}
+                itemProp="itemListElement"
+                itemScope
+                itemType="https://schema.org/Organization"
+              >
+                <h3 itemProp="jobTitle">{job.title}</h3>
+                <p className="position" itemProp="name">{job.company}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   );
 }
 

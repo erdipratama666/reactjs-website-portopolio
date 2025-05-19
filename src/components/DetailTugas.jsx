@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SEO from './SEO';
 import '../styles/DetailTugas.css'; 
 
 export default function DetailTugas() {
@@ -217,16 +218,21 @@ export default function DetailTugas() {
   if (!currentTugas) {
     return (
       <>
+        <SEO
+          title="Tugas Tidak Ditemukan | Erdi Pratama"
+          description="Halaman tugas yang Anda cari tidak ditemukan."
+          url={`/tugas/${id}`}
+        />
         <Navbar />
-        <div className="detail-container">
-          <h2 className="detail-heading">Tugas tidak ditemukan</h2>
+        <main className="detail-container" itemScope itemType="https://schema.org/Article">
+          <h1 className="detail-heading" itemProp="headline">Tugas tidak ditemukan</h1>
           <button
             onClick={() => navigate('/tugas')}
             className="back-button"
           >
             ← Kembali ke Daftar Tugas
           </button>
-        </div>
+        </main>
         <Footer />
       </>
     );
@@ -234,13 +240,22 @@ export default function DetailTugas() {
 
   return (
     <>
+      <SEO
+        title={`Tugas ${id}: ${currentTugas.title} | Erdi Pratama`}
+        description={`Detail tugas ${currentTugas.title} oleh Erdi Pratama.`}
+        url={`/tugas/${id}`}
+      />
       <Navbar />
-      <div className="detail-container">
-        <h2 className="detail-heading">Tugas {id}: {currentTugas.title}</h2>
+      <main className="detail-container" itemScope itemType="https://schema.org/Article">
+        <meta itemProp="author" content="Erdi Pratama" />
+        <meta itemProp="datePublished" content="2025-05-19" />
+        <h1 className="detail-heading" itemProp="headline">
+          Tugas {id}: {currentTugas.title}
+        </h1>
         
         {currentTugas.sections.map((section, index) => (
-          <div key={index} className="detail-section">
-            <h3 className="section-heading">{section.title}</h3>
+          <section key={index} className="detail-section" itemProp="articleBody">
+            <h2 className="section-heading">{section.title}</h2>
             
             {section.content.map((item, contentIndex) => {
               if (item.type === 'paragraph') {
@@ -268,7 +283,7 @@ export default function DetailTugas() {
               }
               return null;
             })}
-          </div>
+          </section>
         ))}
         
         <div className="back-button-container">
@@ -279,7 +294,7 @@ export default function DetailTugas() {
             ← Kembali ke Daftar Tugas
           </button>
         </div>
-      </div>
+      </main>
     </>
   );
 }

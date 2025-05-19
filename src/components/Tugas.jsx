@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SEO from './SEO';
 import '../styles/Tugas.css'; 
 
 export default function Tugas() {
@@ -13,6 +14,11 @@ export default function Tugas() {
 
   return (
     <>
+      <SEO
+        title="Daftar Tugas | Erdi Pratama"
+        description="Kumpulan tugas kuliah Erdi Pratama, materi logika first order dan lainnya."
+        url="/tugas"
+      />
       <Navbar />
       <div className="tugas-container">
         <h1 className="tugas-heading">Daftar Tugas</h1>

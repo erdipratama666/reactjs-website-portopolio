@@ -3,7 +3,7 @@ import '../styles/Footer.css'
 function Footer() {
   return (
     <footer>
-      <span>&copy; Erdi 2025</span>
+      <span>&copy; Erdi Pratama 2025</span>
     </footer>
   )
 }
