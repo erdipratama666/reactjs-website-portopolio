@@ -24,7 +24,7 @@ const Hero = () => {
             height="100"
             loading="eager"
             itemProp="image"
-            fetchpriority="high" // tambahkan ini untuk Chrome 109+
+            fetchpriority="high"
           />
         </div>
       </section>
