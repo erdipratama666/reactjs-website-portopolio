@@ -17,7 +17,7 @@
   position: relative;
   z-index: 2;
   transform: translateY(0);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* transition: transform 0.4s ease, box-shadow 0.4s ease; */ /* nonaktifkan transition */
   overflow: hidden;
 }
 
@@ -136,11 +136,7 @@
   text-align: justify;
   position: relative;
   opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.about-text p:hover {
-  opacity: 1;
+  /* transition: opacity 0.3s ease; */ /* nonaktifkan transition */
 }
 
 .socialMedia {
