@@ -20,7 +20,7 @@ export default defineConfig({
 
       },
       // Tambahkan include untuk memastikan favicon.png ter-copy
-      includeAssets: ['assets/profile-picture.png'],
+      includeAssets: ['assets/profile-picture.webp'],
     }),
     createHtmlPlugin({
       minify: true,
@@ -35,8 +35,8 @@ export default defineConfig({
       output: {
         assetFileNames: (assetInfo) => {
           // Pastikan profile-picture.png tetap berada di /assets/
-          if (assetInfo.name === 'profile-picture.png') {
-            return 'assets/profile-picture.png';
+          if (assetInfo.name === 'profile-picture.webp') {
+            return 'assets/profile-picture.webp';
           }
           // Asset lainnya di-hash seperti biasa
           return 'assets/[name]-[hash][extname]';

@@ -1,5 +1,5 @@
 import '../styles/Hero.css';
-import avatar from '../assets/profile-picture.png';
+import avatar from '../assets/profile-picture.webp';
 
 const Hero = () => {
   return (
@@ -16,7 +16,6 @@ const Hero = () => {
           <h2 itemProp="jobTitle">Web Developer</h2>
           <p className="welcome">Welcome to My personal website.</p>
         </div>
-        
         <div className="hero-img">
           <img
             src={avatar}
@@ -25,6 +24,7 @@ const Hero = () => {
             height="100"
             loading="eager"
             itemProp="image"
+            fetchpriority="high" // tambahkan ini untuk Chrome 109+
           />
         </div>
       </section>
