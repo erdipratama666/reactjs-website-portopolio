@@ -8,7 +8,7 @@ export default function NotFound() {
       <SEO
         title="404 Not Found | Erdi Pratama"
         description="Halaman yang Anda cari tidak ditemukan di website Erdi Pratama."
-        url="/404"
+        url="/"
       />
       <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
         <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
