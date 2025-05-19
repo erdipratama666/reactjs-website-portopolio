@@ -20,7 +20,7 @@ const Hero = () => {
           <img
             src={avatar}
             alt="Erdi Pratama - Web Developer"
-            width="100"
+            width="75"
             height="100"
             loading="eager"
             itemProp="image"
