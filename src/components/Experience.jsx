@@ -7,32 +7,38 @@ function Experience() {
     {
       title: "Content Creator",
       company: "Zamal Collection",
+      duration: "Jan 2022 - Present",
+      description: "Mengelola konten media sosial dan kampanye digital marketing."
     },
     {
       title: "Documentation",
       company: "Project MA AS-Siroji",
+      duration: "Mar 2021 - Nov 2021",
+      description: "Bertanggung jawab untuk dokumentasi kegiatan dan pembuatan laporan proyek."
     },
     {
       title: "Administration",
       company: "Karang Taruna",
+      duration: "Jun 2020 - Dec 2021",
+      description: "Mengelola administrasi dan koordinasi anggota dalam berbagai kegiatan masyarakat."
     },
   ];
 
   useEffect(() => {
-    const titleElement = document.querySelector('#experience h2');
-
+    // Remove default styles for h2 after element
+    const titleElement = document.querySelector('.experience-section h2');
+    
     if (titleElement) {
       const styleEl = document.createElement('style');
-
+      
       styleEl.textContent = `
-        #experience h2::after {
-          content: none !important;
-          display: none !important;
+        .experience-section h2::after {
+          content: "" !important;
         }
       `;
-
+      
       document.head.appendChild(styleEl);
-
+      
       return () => {
         document.head.removeChild(styleEl);
       };
@@ -44,7 +50,7 @@ function Experience() {
       <SEO
         title="Experience | Erdi Pratama"
         description="Pengalaman kerja dan organisasi Erdi Pratama sebagai Content Creator, Dokumentasi, dan Administrasi."
-        url="/" // Perbaikan: gunakan url="/" untuk canonical section
+        url="/"
       />
       <section
         id="experience"
@@ -54,6 +60,7 @@ function Experience() {
       >
         <div className="wrapper">
           <h2 itemProp="name">Experience</h2>
+        
           <ul className="experience-list">
             {experienceData.map((job, index) => (
               <li
@@ -65,6 +72,8 @@ function Experience() {
               >
                 <h3 itemProp="jobTitle">{job.title}</h3>
                 <p className="position" itemProp="name">{job.company}</p>
+                <span className="duration">{job.duration}</span>
+                <p className="description">{job.description}</p>
               </li>
             ))}
           </ul>

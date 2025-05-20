@@ -12,7 +12,7 @@
 .section-tittle {
   text-align: center;
   font-size: 2.8rem;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 1rem auto;
   padding: 0;
   color: #000000 !important; 
   letter-spacing: 5px;
@@ -111,7 +111,7 @@
 .project-title {
   font-size: 1.8rem;
   margin: 0 0 1rem 0;
-  color: #222831;
+  color: #000000;
   letter-spacing: 1px;
   border-bottom: 2px solid rgba(238, 238, 238, 0.6);
   padding-bottom: 15px;
@@ -120,34 +120,18 @@
   font-weight: 700;
 }
 
-.project-title::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #222831;
-  transition: width 0.4s ease;
-}
-
-.project:hover .project-title::after {
-  width: 100%;
-}
 
 .project-description {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #333;
+  color: #151515;
   margin: 1.5rem 0 1.2rem 0;
   position: relative;
   padding-left: 0;
   transition: padding-left 0.3s ease;
 }
 
-.project:hover .project-description {
-  padding-left: 10px;
-}
+
 
 .project-button-link {
   display: inline-block;

@@ -46,24 +46,6 @@
 }
 
 
-.byline::before {  
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  height: 3px;
-  width: 0;
-  background: linear-gradient(90deg, transparent, #000000, transparent);
-  transition: width 0.4s ease;
-}
-
-.logo:hover .byline::before {
-  width: 100%;
-}
-
-.logo:hover .byline {
-  transform: translateY(-2px);
-}
 
 .menu {
   display: flex;
