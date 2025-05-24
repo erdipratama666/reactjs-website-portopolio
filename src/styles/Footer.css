@@ -9,8 +9,6 @@ footer {
 }
 
 
-
-
 /* Animasi untuk copyright */
 @keyframes pulse {
   0% { opacity: 0.8; }
@@ -31,9 +29,6 @@ footer span {
     font-size: 0.9rem;
   }
   
-  footer:hover {
-    letter-spacing: 3.5px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -43,7 +38,4 @@ footer span {
     font-size: 0.8rem;
   }
   
-  footer:hover {
-    letter-spacing: 2.5px;
-  }
 }
