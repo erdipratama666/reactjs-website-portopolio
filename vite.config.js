@@ -24,7 +24,6 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          // Preload critical images
           preloadImages: `
             <link rel="preload" as="image" href="/assets/profile-picture.webp" type="image/webp">
           `
@@ -40,14 +39,12 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
-          // Critical images tanpa hash untuk konsistensi caching
           const criticalImages = ['profile-picture.webp'];
           
           if (criticalImages.includes(assetInfo.name)) {
             return 'assets/[name][extname]';
           }
           
-          // Images lain dengan hash
           const imgExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.avif', '.svg'];
           const isImage = imgExtensions.some(ext => assetInfo.name?.endsWith(ext));
           
@@ -55,16 +52,13 @@ export default defineConfig({
             return 'assets/images/[name]-[hash][extname]';
           }
           
-          // Assets lain
           return 'assets/[name]-[hash][extname]';
         },
-        // Chunk splitting untuk optimasi loading
         manualChunks: {
           vendor: ['react', 'react-dom'],
         }
       },
     },
-    // Optimasi untuk production
     cssMinify: true,
     reportCompressedSize: false,
     chunkSizeWarningLimit: 1000,
@@ -74,7 +68,6 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
-  // Optimasi dev server
   server: {
     hmr: {
       overlay: false
@@ -86,7 +79,6 @@ export default defineConfig({
       'Referrer-Policy': 'strict-origin-when-cross-origin'
     }
   },
-  // Optimasi preview
   preview: {
     headers: {
       'Cache-Control': 'public, max-age=31536000'

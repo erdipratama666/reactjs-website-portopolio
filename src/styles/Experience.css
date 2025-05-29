@@ -40,13 +40,12 @@
   clear: both;
 }
 
-/* Added display: flex and justify-content: center for the list */
 .experience-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Added spacing between items */
+  gap: 2rem; 
   width: 100%;
 }
 
@@ -75,7 +74,7 @@
   transform-style: preserve-3d;
   animation: fadeInUp 0.6s ease forwards;
   opacity: 0;
-  margin: 0 0.5rem; /* Added horizontal margin */
+  margin: 0 0.5rem; 
 }
 
 .experience-item h3 {
@@ -118,7 +117,7 @@
   font-size: 1rem;
   color: #151515;
   line-height: 1.6;
-  margin-bottom: 0.5rem; /* Added bottom margin */
+  margin-bottom: 0.5rem; 
 }
 
 .experience-item:nth-child(1) {
@@ -154,7 +153,7 @@
   }
 
   .experience-list {
-    gap: 2.5rem; /* Increased gap */
+    gap: 2.5rem; 
   }
 
   .experience-item {
@@ -178,7 +177,7 @@
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    align-items: center; /* Center items */
+    align-items: center; 
   }
   
   .experience-item {

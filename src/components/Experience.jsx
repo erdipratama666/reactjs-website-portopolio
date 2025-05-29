@@ -14,13 +14,13 @@ function Experience() {
       title: "Documentation",
       company: "Project MA AS-Siroji",
       duration: "Okt 2024 - Jan 2025",
-      description: "Bertanggung jawab untuk dokumentasi kegiatan dan pembuatan laporan proyek."
+      description: "Bertanggung jawab untuk pembuatan laporan proyek."
     },
     {
       title: "Administration",
       company: "Karang Taruna",
       duration: "Jun 2020 - Present",
-      description: "Mengelola administrasi dan koordinasi anggota dalam berbagai kegiatan masyarakat."
+      description: "Mengelola administrasi anggota dalam kegiatan masyarakat."
     },
   ];
 

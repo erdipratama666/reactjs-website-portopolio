@@ -9,7 +9,6 @@ footer {
 }
 
 
-/* Animasi untuk copyright */
 @keyframes pulse {
   0% { opacity: 0.8; }
   50% { opacity: 1; }
@@ -21,7 +20,6 @@ footer span {
   animation: pulse 3s infinite ease-in-out;
 }
 
-/* Responsivitas untuk mobile */
 @media screen and (max-width: 768px) {
   footer {
     padding: 2rem;

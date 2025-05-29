@@ -29,7 +29,7 @@ function Skills() {
       <SEO
         title="Skills | Erdi Pratama"
         description="Daftar skills Erdi Pratama, meliputi technical skills, soft skills, dan bahasa yang dikuasai."
-        url="/" // Perbaikan: gunakan url="/" untuk canonical section
+        url="/"
       />
       <section className="skills-section" id="skills">
         <div className="section-title-container">
