@@ -1,4 +1,56 @@
+# Robots.txt for erdipratama.my.id
+# Updated: May 29, 2025
+
 User-agent: *
 Allow: /
 
+# Disallow admin/development pages (if any)
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /.env
+Disallow: /src/
+Disallow: /node_modules/
+
+# Disallow duplicate content
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+
+# Allow important directories
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl delay (optional - use only if needed)
+# Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://www.erdipratama.my.id/sitemap.xml
+Sitemap: https://www.erdipratama.my.id/sitemap-images.xml
+
+# Host (optional but recommended)
+Host: https://www.erdipratama.my.id

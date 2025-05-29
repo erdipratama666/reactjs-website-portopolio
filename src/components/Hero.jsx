@@ -20,11 +20,12 @@ const Hero = () => {
           <img
             src={avatar}
             alt="Erdi Pratama - Web Developer"
-            width="75"
-            height="100"
+            width="220"
+            height="220"
             loading="eager"
+            decoding="async"
             itemProp="image"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </div>
       </section>

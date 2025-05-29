@@ -7,25 +7,24 @@ function Experience() {
     {
       title: "Content Creator",
       company: "Zamal Collection",
-      duration: "Jan 2022 - Present",
-      description: "Mengelola konten media sosial dan kampanye digital marketing."
+      duration: "Jan 2025 - Mar 2025",
+      description: "Mengelola konten media sosial."
     },
     {
       title: "Documentation",
       company: "Project MA AS-Siroji",
-      duration: "Mar 2021 - Nov 2021",
+      duration: "Okt 2024 - Jan 2025",
       description: "Bertanggung jawab untuk dokumentasi kegiatan dan pembuatan laporan proyek."
     },
     {
       title: "Administration",
       company: "Karang Taruna",
-      duration: "Jun 2020 - Dec 2021",
+      duration: "Jun 2020 - Present",
       description: "Mengelola administrasi dan koordinasi anggota dalam berbagai kegiatan masyarakat."
     },
   ];
 
   useEffect(() => {
-    // Remove default styles for h2 after element
     const titleElement = document.querySelector('.experience-section h2');
     
     if (titleElement) {

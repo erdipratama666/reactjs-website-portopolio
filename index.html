@@ -3,74 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erdi Pratama | Web Developer</title>
-  <meta name="description" content="Portofolio Erdi Pratama, Web Developer yang berfokus pada pengembangan website modern dengan React.js" />
-  <meta name="keywords" content="Erdi Pratama, web developer, portofolio, react developer, frontend" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Erdi Pratama | Web Developer & Frontend Specialist</title>
+  <meta name="title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <meta name="description" content="Erdi Pratama adalah Web Developer profesional yang berspesialisasi dalam React.js, JavaScript modern, dan pengembangan frontend. Berpengalaman dalam membangun website responsif dan aplikasi web yang user-friendly." />
+  <meta name="keywords" content="Erdi Pratama, web developer Indonesia, react developer, frontend developer, javascript developer, portofolio web developer, jasa pembuatan website, UI/UX developer" />
   <meta name="author" content="Erdi Pratama" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  
+  <!-- Canonical & Language -->
   <link rel="canonical" href="https://www.erdipratama.my.id/" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="alternate" href="https://www.erdipratama.my.id/" hreflang="id" />
-
-  <!-- Open Graph -->
+  <link rel="alternate" href="https://www.erdipratama.my.id/en/" hreflang="en" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Erdi Pratama" />
+  <meta property="og:site_name" content="Erdi Pratama Portfolio" />
   <meta property="og:url" content="https://www.erdipratama.my.id/" />
-  <meta property="og:title" content="Erdi Pratama | Web Developer" />
-  <meta property="og:description" content="Portofolio Erdi Pratama, Web Developer yang berfokus pada pengembangan website modern dengan React.js" />
+  <meta property="og:title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <meta property="og:description" content="Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern. Lihat portofolio dan proyek-proyek terbaru saya." />
   <meta property="og:image" content="https://www.erdipratama.my.id/og-image.jpg" />
-
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Erdi Pratama - Web Developer Portfolio" />
+  <meta property="og:locale" content="id_ID" />
+  
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.erdipratama.my.id/" />
-  <meta name="twitter:title" content="Erdi Pratama | Web Developer" />
-  <meta name="twitter:description" content="Portofolio Erdi Pratama, Web Developer yang berfokus pada pengembangan website modern dengan React.js" />
+  <meta name="twitter:title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <meta name="twitter:description" content="Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern." />
   <meta name="twitter:image" content="https://www.erdipratama.my.id/og-image.jpg" />
-
-  <!-- Preload gambar avatar untuk LCP -->
-  <link rel="preload" as="image" href="/assets/profile-picture.webp" fetchpriority="high"/>
-
-  <!-- Preconnect ke Google Fonts -->
+  <meta name="twitter:image:alt" content="Erdi Pratama - Web Developer Portfolio" />
+  
+  <!-- Critical Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" />
-
-  <!-- Preload font stylesheets -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  
+  <!-- Preload Critical Assets -->
+  <link rel="preload" as="image" href="/assets/profile-picture.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" />
+  
+  <!-- Optimized Font Loading -->
   <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
-  />
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
-  />
-
-  <!-- Load fonts with font-display: swap -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
   />
   <link
-    href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
     rel="stylesheet"
     media="print"
     onload="this.media='all'"
   />
-
+  
+  <!-- Fallback for no-JS -->
   <noscript>
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </noscript>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Erdi Pratama",
+    "jobTitle": "Web Developer",
+    "description": "Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern",
+    "url": "https://www.erdipratama.my.id",
+    "image": "https://www.erdipratama.my.id/assets/profile-picture.webp",
+    "sameAs": [
+      "https://github.com/erdipratama",
+      "https://linkedin.com/in/erdipratama",
+      "https://instagram.com/erdipratama"
+    ],
+    "knowsAbout": [
+      "React.js",
+      "JavaScript",
+      "Frontend Development",
+      "Web Development",
+      "HTML5",
+      "CSS3",
+      "Node.js",
+      "TypeScript"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bandung",
+      "addressRegion": "Jawa Barat",
+      "addressCountry": "Indonesia"
+    }
+  }
+  </script>
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="msapplication-TileColor" content="#000000" />
 </head>
 <body>
   <div id="root"></div>
