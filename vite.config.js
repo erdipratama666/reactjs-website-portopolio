@@ -23,29 +23,18 @@ export default defineConfig({
                 maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
               }
             }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-stylesheets',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365
-              }
-            }
           }
         ]
       },
       manifest: {
-        name: 'Erdi Pratama - Web Developer',
+        name: 'Erdi Pratama - Web Developer & Frontend Specialist',
         short_name: 'Erdi Pratama',
         description: 'Portfolio website of Erdi Pratama - Web Developer & Frontend Specialist',
         start_url: '/',
         display: 'standalone',
         orientation: 'portrait-primary',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        background_color: '#000000',
+        theme_color: '#ffffff',
         icons: [
           {
             src: '/icon-192x192.png',
@@ -72,8 +61,11 @@ export default defineConfig({
         'icon-192x192.png',
         'icon-512x512.png',
         'assets/profile-picture.webp'
-      ]
-      // Removed injectManifest since it conflicts with generateSW (default mode)
+      ],
+      // Disable auto-generated manifest.json untuk menghindari konflik
+      injectManifest: {
+        swSrc: 'src/sw.js', // optional jika ingin custom service worker
+      }
     }),
     createHtmlPlugin({
       minify: true,
@@ -134,8 +126,7 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    strictPort: false, // Changed to false - will find available port
-    host: true, // Added for better network access
+    strictPort: true,
     hmr: {
       overlay: false
     },
@@ -149,8 +140,7 @@ export default defineConfig({
   },
   preview: {
     port: 4173,
-    strictPort: false, // Changed to false
-    host: true, // Added for better network access
+    strictPort: true,
     headers: {
       'Cache-Control': 'public, max-age=31536000',
       'X-Frame-Options': 'DENY',
