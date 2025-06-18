@@ -13,19 +13,19 @@ const Hero = () => {
         <div className="hero-text">
           <p className="intro">Hi, I'm</p>
           <h1 itemProp="name">Erdi Pratama</h1>
-          <h2 itemProp="jobTitle">Web Developer</h2>
-          <p className="welcome">Welcome to My personal website.</p>
+          <h2 itemProp="jobTitle">Web Developer & Frontend Specialist</h2>
+          <p className="welcome">Welcome to my personal website.</p>
         </div>
         <div className="hero-img">
           <img
             src={avatar}
-            alt="Erdi Pratama - Web Developer"
+            alt="Erdi Pratama - Web Developer & Frontend Specialist"
             width="220"
             height="220"
             loading="eager"
             decoding="async"
             itemProp="image"
-            fetchPriority="high"
+            fetchpriority="high"
           />
         </div>
       </section>
