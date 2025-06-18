@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Primary Meta Tags -->
-  <title>Erdi Pratama | Web Developer & Frontend Specialist</title>
-  <meta name="title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <title>Erdi Pratama | Web Developer</title>
+  <meta name="title" content="Erdi Pratama | Web Developer" />
   <meta name="description" content="Erdi Pratama adalah Web Developer profesional yang berspesialisasi dalam React.js, JavaScript modern, dan pengembangan frontend. Berpengalaman dalam membangun website responsif dan aplikasi web yang user-friendly." />
   <meta name="keywords" content="Erdi Pratama, web developer Indonesia, react developer, frontend developer, javascript developer, portofolio web developer, jasa pembuatan website, UI/UX developer" />
   <meta name="author" content="Erdi Pratama" />
@@ -28,7 +28,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Erdi Pratama Portfolio" />
   <meta property="og:url" content="https://www.erdipratama.my.id/" />
-  <meta property="og:title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <meta property="og:title" content="Erdi Pratama | Web Developer" />
   <meta property="og:description" content="Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern. Lihat portofolio dan proyek-proyek terbaru saya." />
   <meta property="og:image" content="https://www.erdipratama.my.id/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -39,7 +39,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.erdipratama.my.id/" />
-  <meta name="twitter:title" content="Erdi Pratama | Web Developer & Frontend Specialist" />
+  <meta name="twitter:title" content="Erdi Pratama | Web Developer" />
   <meta name="twitter:description" content="Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern." />
   <meta name="twitter:image" content="https://www.erdipratama.my.id/og-image.jpg" />
   <meta name="twitter:image:alt" content="Erdi Pratama - Web Developer Portfolio" />
@@ -49,37 +49,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   
-  <!-- Preload Critical Assets - FIXED: Only truly critical resources -->
-  <link rel="preload" 
-        as="image" 
-        href="/assets/profile-picture.webp" 
-        type="image/webp" 
-        media="(min-width: 768px)" />
+  <!-- Preload Critical Assets -->
+  <link rel="preload" as="image" href="/assets/profile-picture.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" />
   
-  <!-- Optimized Single Font Loading - FIXED: Consolidated fonts -->
-  <link rel="preload" 
-        as="style" 
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..700&family=Kanit:wght@300;400;500;600&display=swap" />
-  
-  <!-- Non-blocking font loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..700&family=Kanit:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-        media="print"
-        onload="this.media='all'" />
+  <!-- Optimized Font Loading -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
   
   <!-- Fallback for no-JS -->
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..700&family=Kanit:wght@300;400;500;600&display=swap"
-          rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </noscript>
   
-  <!-- Schema.org Structured Data - ENHANCED -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Erdi Pratama",
-    "jobTitle": "Web Developer & Frontend Specialist",
+    "jobTitle": "Web Developer",
     "description": "Web Developer profesional yang berspesialisasi dalam React.js dan pengembangan frontend modern",
     "url": "https://www.erdipratama.my.id",
     "image": "https://www.erdipratama.my.id/assets/profile-picture.webp",
@@ -96,75 +114,27 @@
       "HTML5",
       "CSS3",
       "Node.js",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS"
+      "TypeScript"
     ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bandung",
       "addressRegion": "Jawa Barat",
       "addressCountry": "Indonesia"
-    },
-    "offers": {
-      "@type": "Offer",
-      "description": "Professional web development services"
     }
   }
   </script>
   
-  <!-- Security Meta Tags -->
+  <!-- Valid Security Meta Tags (only these work in HTML) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   
-  <!-- Theme Colors -->
+  <!-- Theme Color -->
   <meta name="theme-color" content="#ffffff" />
   <meta name="msapplication-TileColor" content="#000000" />
-  
-  <!-- Performance Optimization -->
-  <link rel="prefetch" href="/assets/images/" />
-  
-  <!-- Critical CSS Inline (Optional - add your critical CSS here) -->
-  <style>
-    /* Critical CSS for faster initial render */
-    body {
-      margin: 0;
-      font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-    }
-    
-    #root {
-      min-height: 100vh;
-    }
-    
-    /* Loading state */
-    .loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: 'Nunito Sans', sans-serif;
-    }
-  </style>
 </head>
 <body>
-  <!-- Loading fallback -->
-  <div id="root">
-    <div class="loading">
-      <div>Loading...</div>
-    </div>
-  </div>
-  
-  <!-- Main App Script -->
+  <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  
-  <!-- Fallback for older browsers -->
-  <script nomodule>
-    document.getElementById('root').innerHTML = 
-      '<div style="text-align:center;padding:50px;font-family:sans-serif;">' +
-      '<h2>Browser Tidak Didukung</h2>' +
-      '<p>Silakan gunakan browser modern seperti Chrome, Firefox, atau Safari.</p>' +
-      '</div>';
-  </script>
 </body>
 </html>
