@@ -137,10 +137,12 @@
 
 .skill-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
+  flex-direction: row;      /* Ubah dari column ke row */
+  align-items: center;      /* Vertikal tengah */
+  gap: 0.8rem;              /* Jarak antara icon dan teks */
+  justify-content: flex-start;
   padding: 1.5rem 1rem;
+  text-align: left;         /* Teks rata kiri */
 }
 
 .skill-icon {
@@ -328,5 +330,13 @@
     animation: none !important;
     transition: none !important;
     transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
   }
 }

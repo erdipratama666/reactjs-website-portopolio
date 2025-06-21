@@ -5,7 +5,6 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, 
   FaMicrosoft, FaGithub, FaLanguage 
 } from 'react-icons/fa';
-import { SiMicrosoftword, SiMicrosoftexcel } from 'react-icons/si';
 import { IoLanguage } from 'react-icons/io5';
 
 function Skills() {
@@ -19,8 +18,8 @@ function Skills() {
   ];
 
   const softSkills = [
-    { name: 'Word', icon: <SiMicrosoftword size={24} /> },
-    { name: 'Excel', icon: <SiMicrosoftexcel size={24} /> },
+    { name: 'Word', icon: <FaMicrosoft size={24} /> }, 
+    { name: 'Excel', icon: <FaMicrosoft size={24} /> },
     { name: 'Github', icon: <FaGithub size={24} /> }
   ];
 

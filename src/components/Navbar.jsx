@@ -52,6 +52,7 @@ function Navbar() {
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
+          <span className="bar"></span>
         </button>
 
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
@@ -62,14 +63,19 @@ function Navbar() {
               </button>
             </li>
             <li>
-              <button className="link-button" onClick={() => handleScrollTo('experience')}>
-                Experience
-              </button>
-            </li>
-            <li>
               <button className="link-button" onClick={() => handleScrollTo('portfolio')}>
                 Portfolio
               </button>
+            </li>
+              <li>
+              <Link to="/experience" onClick={() => setMenuOpen(false)}>
+                Experience
+              </Link> 
+            </li>
+            <li>
+              <Link to="/blog" onClick={() => setMenuOpen(false)}>
+                Blog
+              </Link> 
             </li>
             <li>
               <Link to="/tugas" onClick={() => setMenuOpen(false)}>

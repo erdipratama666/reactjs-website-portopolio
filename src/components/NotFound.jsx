@@ -12,7 +12,6 @@ export default function NotFound() {
         url="/"
       />
       <div className="notfound-container">
-        <h1 className="notfound-title">404</h1>
         <h2 className="notfound-subtitle">Halaman Tidak Ditemukan</h2>
         <p className="notfound-desc">Maaf, halaman yang Anda cari tidak tersedia.</p>
         <Link 

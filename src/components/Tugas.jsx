@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import Footer from './Footer';
 import SEO from './SEO';
 import '../styles/Tugas.css'; 
 

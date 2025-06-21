@@ -16,7 +16,6 @@ function Home() {
       <Hero />
       <About />
       <Skills />
-      <Experience />
       <Portfolio />
       <Footer />
     </>

@@ -27,9 +27,9 @@ export default defineConfig({
         ]
       },
       manifest: {
-        name: 'Erdi Pratama - Web Developer & Frontend Specialist',
+        name: 'Erdi Pratama - Fullstack Developer',
         short_name: 'Erdi Pratama',
-        description: 'Portfolio website of Erdi Pratama - Web Developer & Frontend Specialist',
+        description: 'Portfolio website of Erdi Pratama - Fullstack Developer',
         start_url: '/',
         display: 'standalone',
         orientation: 'portrait-primary',

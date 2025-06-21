@@ -60,6 +60,40 @@
   transform: translateY(1px);
 }
 
+.job-title-container {
+  height: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.job-title {
+  position: relative;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #ffffff;
+  border-right: 2px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  animation:
+    fadeInUp 0.8s forwards 0.6s,
+    typing 3.5s steps(40, end) 1.4s forwards,
+    blink-caret 0.75s step-end infinite 1.4s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ffffff; }
+}
+
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -216,6 +250,15 @@ h2 {
   .contact-text {
     font-size: 0.95rem;
   }
+
+    .job-title-container {
+    height: 2.5rem;
+  }
+  
+  .job-title {
+    font-size: 1.8rem;
+  }
+
 
 
 @media (min-width: 768px) {

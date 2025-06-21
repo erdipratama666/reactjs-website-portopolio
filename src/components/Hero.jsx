@@ -1,6 +1,5 @@
 import '../styles/Hero.css';
 import avatar from '../assets/profile-picture.webp';
-// Pastikan Anda sudah memiliki ikon ini atau install package react-icons
 import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
@@ -15,11 +14,13 @@ const Hero = () => {
       itemType="https://schema.org/Person"
     >
       <div className="hero-text">
-        <p className="intro">Hi, I'm</p>
         <h1 itemProp="name">Erdi Pratama</h1>
-        <h2 itemProp="jobTitle">Web Developer & Frontend Specialist</h2>
+        <div className="job-title-container">
+          <h2 className="job-title" itemProp="jobTitle">
+            <span className="title-part">Fullstack Developer</span>
+          </h2>
+        </div>
         
-        {/* Tambahkan bagian kontak di sini */}
         <div className="contact-cta">
           <p className="contact-text">Hubungi Saya:</p>
           <div className="contact-links">
@@ -48,7 +49,7 @@ const Hero = () => {
       <div className="hero-img">
         <img
           src={avatar}
-          alt="Erdi Pratama - Web Developer & Frontend Specialist"
+          alt="Erdi Pratama - Fullstack Developer"
           width="220"
           height="220"
           loading="eager"
