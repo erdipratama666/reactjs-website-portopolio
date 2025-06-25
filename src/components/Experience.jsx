@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import SEO from './SEO';
 import '../styles/Experience.css';
@@ -54,7 +53,6 @@ function Experience() {
   ];
 
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
 
@@ -65,18 +63,11 @@ function Experience() {
         description="Pengalaman kerja dan organisasi Erdi Pratama sebagai Content Creator, Dokumentasi, dan Administrasi."
         url="/experience"
       />
-      
       <Navbar />
-      
       <main className="experience-page">
         <div className="container">
-          <header className="page-header">
-          </header>
-
-          {/* Modern Timeline Layout */}
           <div className="experience-wrapper">
             <h2 className="experience-title">Pengalaman Kerja</h2>
-            
             <div className="timeline">
               {experienceData.map((job, index) => (
                 <div 
@@ -86,20 +77,16 @@ function Experience() {
                   itemType="https://schema.org/WorkExperience"
                 >
                   <span className="date" itemProp="datePosted">{job.date}</span>
-                  
                   <h3 className="role" itemProp="jobTitle">
                     <span className="timeline-icon">{job.icon}</span>
                     {job.role}
                   </h3>
-                  
                   <h4 className="company" itemProp="hiringOrganization">
                     {job.company}
                   </h4>
-                  
                   <p className="description" itemProp="description">
                     {job.description}
                   </p>
-                  
                   <ul className="details-list">
                     {job.details.map((detail, detailIndex) => (
                       <li key={detailIndex}>{detail}</li>
@@ -109,54 +96,6 @@ function Experience() {
               ))}
             </div>
           </div>
-
-          {/* Alternative Grid Layout (commented out, but available) */}
-          {/* 
-          <section 
-            className="experience-section"
-            itemScope
-            itemType="https://schema.org/ItemList"
-          >
-            <div className="experience-grid">
-              {experienceData.map((job, index) => (
-                <article
-                  className="experience-card"
-                  key={index}
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="https://schema.org/WorkExperience"
-                >
-                  <div className="experience-header">
-                    <h2 className="job-title" itemProp="jobTitle">
-                      {job.title}
-                    </h2>
-                    <div className="company-info">
-                      <h3 className="company-name" itemProp="hiringOrganization">
-                        {job.company}
-                      </h3>
-                      <span className="duration" itemProp="datePosted">
-                        {job.duration}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className="experience-content">
-                    <p className="job-description" itemProp="description">
-                      {job.description}
-                    </p>
-                  </div>
-                  
-                  <div className="experience-footer">
-                    <div className="experience-number">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-          */}
-
         </div>
       </main>
     </>

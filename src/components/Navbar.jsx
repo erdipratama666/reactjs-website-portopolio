@@ -41,7 +41,6 @@ function Navbar() {
             <p className="byline">ERDI PRATAMA</p>
           </div>
         </div>
-
         <button
           className={`hamburger ${menuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -53,8 +52,8 @@ function Navbar() {
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
+          <span className="bar"></span>
         </button>
-
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li>
@@ -67,15 +66,20 @@ function Navbar() {
                 Portfolio
               </button>
             </li>
-              <li>
+            <li>
               <Link to="/experience" onClick={() => setMenuOpen(false)}>
                 Experience
-              </Link> 
+              </Link>
             </li>
             <li>
               <Link to="/blog" onClick={() => setMenuOpen(false)}>
                 Blog
-              </Link> 
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                Contact
+              </Link>
             </li>
             <li>
               <Link to="/tugas" onClick={() => setMenuOpen(false)}>

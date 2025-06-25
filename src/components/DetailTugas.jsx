@@ -1,13 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import Footer from './Footer';
 import SEO from './SEO';
-import '../styles/DetailTugas.css'; 
+import '../styles/DetailTugas.css';
 
 export default function DetailTugas() {
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   const tugasDetails = {
     '1': {
       title: 'Logika First Order dan Contoh Kasusnya',
@@ -212,9 +211,9 @@ export default function DetailTugas() {
       ]
     }
   };
-  
+
   const currentTugas = tugasDetails[id];
-  
+
   if (!currentTugas) {
     return (
       <>
@@ -252,11 +251,9 @@ export default function DetailTugas() {
         <h1 className="detail-heading" itemProp="headline">
           Tugas {id}: {currentTugas.title}
         </h1>
-        
         {currentTugas.sections.map((section, index) => (
           <section key={index} className="detail-section" itemProp="articleBody">
             <h2 className="section-heading">{section.title}</h2>
-            
             {section.content.map((item, contentIndex) => {
               if (item.type === 'paragraph') {
                 return <p key={contentIndex} className="detail-paragraph">{item.text}</p>;
@@ -285,7 +282,6 @@ export default function DetailTugas() {
             })}
           </section>
         ))}
-        
         <div className="back-button-container">
           <button
             onClick={() => navigate('/tugas')}
@@ -295,6 +291,8 @@ export default function DetailTugas() {
           </button>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
+

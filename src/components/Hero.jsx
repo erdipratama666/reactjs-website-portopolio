@@ -1,10 +1,24 @@
-import '../styles/Hero.css';
 import avatar from '../assets/profile-picture.webp';
-import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaDownload } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import '../styles/Hero.css';
+
+const titles = [
+  "Fullstack Developer",
+  "A Programmer", 
+  "Tech Enthusiast"
+];
 
 const Hero = () => {
   const email = 'erdipratama18@gmail.com';
-  const whatsapp = '6283867550225';
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -14,38 +28,37 @@ const Hero = () => {
       itemType="https://schema.org/Person"
     >
       <div className="hero-text">
-        <h1 itemProp="name">Erdi Pratama</h1>
+        <p className="intro">Hello,</p>
+        <h1 itemProp="name">I'm Erdi Pratama</h1>
         <div className="job-title-container">
           <h2 className="job-title" itemProp="jobTitle">
-            <span className="title-part">Fullstack Developer</span>
+            {titles[titleIndex]}
           </h2>
         </div>
-        
+        <p className="welcome">
+          Selamat datang di portofolio saya! Saya <span className="highlight-name">Erdi Pratama</span> yang sangat antusias menciptakan solusi web inovatif dan mewujudkan ide-ide menjadi nyata melalui kode.
+        </p>
         <div className="contact-cta">
-          <p className="contact-text">Hubungi Saya:</p>
           <div className="contact-links">
-            <a 
-              href={`mailto:${email}`} 
+            <a
+              href="/files/cv-erdi-pratama.pdf"
+              download="CV-Erdi-Pratama.pdf"
+              className="contact-button cv-button"
+            >
+              <FaDownload className="contact-icon" />
+              Download CV
+            </a>
+            <a
+              href={`mailto:${email}`}
               className="contact-button email-button"
               aria-label="Send email"
             >
               <FaEnvelope className="contact-icon" />
-              Email
-            </a>
-            <a
-              href={`https://wa.me/${whatsapp}`}
-              className="contact-button whatsapp-button"
-              aria-label="Chat on WhatsApp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp className="contact-icon" />
-              WhatsApp
+              Contact Me
             </a>
           </div>
         </div>
       </div>
-      
       <div className="hero-img">
         <img
           src={avatar}
@@ -55,7 +68,6 @@ const Hero = () => {
           loading="eager"
           decoding="async"
           itemProp="image"
-          fetchpriority="high"
         />
       </div>
     </section>
