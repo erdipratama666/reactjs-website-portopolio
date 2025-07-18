@@ -11,7 +11,7 @@ import Tugas from './components/Tugas';
 import DetailTugas from './components/DetailTugas';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
-import DetailBlog from './components/DetailBlog'; // tambahkan import ini
+import DetailBlog from './components/DetailBlog'; 
 
 function App() {
   return (

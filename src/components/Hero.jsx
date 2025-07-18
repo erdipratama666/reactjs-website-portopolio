@@ -1,6 +1,7 @@
 import avatar from '../assets/profile-picture.webp';
 import { FaEnvelope, FaDownload } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
 
 const titles = [
@@ -41,21 +42,23 @@ const Hero = () => {
         <div className="contact-cta">
           <div className="contact-links">
             <a
-              href="/files/cv-erdi-pratama.pdf"
-              download="CV-Erdi-Pratama.pdf"
+              href="/files/erdi-pratama-cv.pdf"
+              download="Erdi Pratama - CV.pdf"
               className="contact-button cv-button"
             >
               <FaDownload className="contact-icon" />
               Download CV
             </a>
-            <a
-              href={`mailto:${email}`}
-              className="contact-button email-button"
-              aria-label="Send email"
-            >
-              <FaEnvelope className="contact-icon" />
-              Contact Me
-            </a>
+
+              <Link
+                to="/contact"
+                className="contact-button email-button"
+                aria-label="Contact page"
+              >
+                <FaEnvelope className="contact-icon" />
+                Contact Me
+              </Link>
+
           </div>
         </div>
       </div>

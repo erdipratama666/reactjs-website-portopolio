@@ -9,15 +9,53 @@ const Contact = () => {
     email: '',
     deskripsi: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Pesan berhasil dikirim!');
-    setForm({ nama: '', nohp: '', email: '', deskripsi: '' });
+    setLoading(true);
+    setStatus('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        setForm({ nama: '', nohp: '', email: '', deskripsi: '' });
+        
+        // Optional: Buka WhatsApp setelah berhasil
+        // openWhatsApp();
+      } else {
+        setStatus('error');
+        console.error('Error:', data.message);
+      }
+    } catch (error) {
+      setStatus('error');
+      console.error('Error:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Function untuk buka WhatsApp (alternatif)
+  const openWhatsApp = () => {
+    const phoneNumber = '6283867550225'; // nomor Anda tanpa +
+    const message = `Halo, saya ${form.nama}.\n\nEmail: ${form.email}\nPesan: ${form.deskripsi}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
   };
 
   return (
@@ -100,9 +138,32 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <button type="submit" className="submit-btn">
-                  Kirim Pesan
-                </button>
+                
+                <div className="form-buttons">
+                  <button type="submit" className="submit-btn" disabled={loading}>
+                    {loading ? 'Mengirim...' : 'Kirim Email'}
+                  </button>
+                  
+                  <button 
+                    type="button" 
+                    className="whatsapp-btn" 
+                    onClick={openWhatsApp}
+                    disabled={!form.nama || !form.deskripsi}
+                  >
+                    Kirim via WhatsApp
+                  </button>
+                </div>
+
+                {status === 'success' && (
+                  <div className="status-message success">
+                    ✅ Pesan berhasil dikirim ke email!
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="status-message error">
+                    ❌ Gagal mengirim pesan. Silakan coba lagi.
+                  </div>
+                )}
               </form>
             </div>
           </div>

@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import SEO from './SEO';
-import '../styles/Tugas.css'; 
+import tugasData from '../tugasData';
+import '../styles/Tugas.css';
 
 export default function Tugas() {
-  const tugasList = [
-    { id: '1', title: 'Tugas 1: Logika First Order' },
-    { id: '2', title: 'Tugas 2: Coming Soon' },
-    { id: '3', title: 'Tugas 3: Coming Soon' },
-    { id: '4', title: 'Tugas 4: Coming Soon' },
-  ];
+  const tugasList = Object.values(tugasData).map((tugas) => ({
+    id: tugas.id,
+    title: `Tugas ${tugas.id}: ${tugas.title}`
+  }));
 
   return (
     <>
@@ -28,9 +27,7 @@ export default function Tugas() {
               to={`/tugas/${tugas.id}`}
               className="tugas-card"
             >
-              <h2 className="tugas-title">
-                {tugas.title}
-              </h2>
+              <h2 className="tugas-title">{tugas.title}</h2>
             </Link>
           ))}
         </div>
