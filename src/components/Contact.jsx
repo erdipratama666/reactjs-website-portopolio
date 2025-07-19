@@ -146,7 +146,7 @@ const Contact = () => {
                   
                   <button 
                     type="button" 
-                    className="whatsapp-btn" 
+                    className="contact-btn" 
                     onClick={openWhatsApp}
                     disabled={!form.nama || !form.deskripsi}
                   >
