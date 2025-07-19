@@ -1,13 +1,14 @@
 const tugas3 = {
   id: '3',
-  title: 'Coming Soon',
+  title: 'Sistem Pakar Penentuan Bakat Anak',
+  link: 'https://sistem-pakar-bakat.vercel.app/',
   sections: [
     {
-      title: 'Coming Soon',
+      title: 'Coba Sistem',
       content: [
         {
           type: 'paragraph',
-          text: 'Coming Soon.'
+          text: 'Untuk mencoba sistem, klik link berikut di bawah.'
         }
       ]
     }

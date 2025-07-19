@@ -42,7 +42,7 @@ function DetailTugas() {
           Tugas {id}: {currentTugas.title}
         </h1>
 
-        {/* Tampilkan semua section termasuk Tugas 3 (Coming Soon) */}
+        {/* Tampilkan semua section termasuk Tugas 3 */}
         {currentTugas.sections?.map((section, index) => (
           <section key={index} className="detail-section">
             <h2 className="section-heading">{section.title}</h2>
@@ -82,6 +82,23 @@ function DetailTugas() {
             })}
           </section>
         ))}
+
+        {/* LINK SECTION */}
+        {currentTugas.link && (
+          <div className="detail-section">
+            <h2 className="section-heading">Link Terkait</h2>
+            <p>
+              <a
+                href={currentTugas.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-button"
+              >
+                Kunjungi Website Sistem Pakar
+              </a>
+            </p>
+          </div>
+        )}
 
         <button onClick={() => navigate('/tugas')} className="back-button">
           ← Kembali ke Daftar Tugas
