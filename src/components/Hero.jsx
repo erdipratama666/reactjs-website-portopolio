@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
 
 const titles = [
+  "Web Developer",
+  "Mobile Developer", 
   "Fullstack Developer",
-  "A Programmer", 
-  "Tech Enthusiast"
 ];
 
 const Hero = () => {

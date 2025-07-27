@@ -11,7 +11,9 @@ import Tugas from './components/Tugas';
 import DetailTugas from './components/DetailTugas';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
-import DetailBlog from './components/DetailBlog'; 
+import DetailBlog from './components/DetailBlog';
+import Portfolio from './components/Portfolio'; 
+import ProjectDetail from './components/ProjectDetail';   
 
 function App() {
   return (
@@ -24,9 +26,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<DetailBlog />} /> {/* Route untuk DetailBlog */}
+        <Route path="/blog/:id" element={<DetailBlog />} />
         <Route path="/tugas" element={<Tugas />} />
         <Route path="/tugas/:id" element={<DetailTugas />} />
+        <Route path="/portfolio" element={<Portfolio />} /> 
+        <Route path="/portfolio/:id" element={<ProjectDetail />} />   
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

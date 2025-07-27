@@ -150,7 +150,7 @@ const Contact = () => {
                     onClick={openWhatsApp}
                     disabled={!form.nama || !form.deskripsi}
                   >
-                    Kirim via WhatsApp
+                    Kirim WhatsApp
                   </button>
                 </div>
 

@@ -1,5 +1,7 @@
 import SEO from './SEO';
 import '../styles/Portfolio.css';
+import projectData from '../data/projectData';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   return (
@@ -7,33 +9,52 @@ const Portfolio = () => {
       <SEO
         title="Portfolio | Erdi Pratama"
         description="Kumpulan projek website karya Erdi Pratama, termasuk website sekolah, aplikasi web, dan lainnya."
-        url="/"
+        url="/portfolio"
       />
       <section id="portfolio">
-        <h3 
-          className="section-title" 
-          style={{ color: '#000000' }}
-        >
-          Portfolio
-        </h3>
+        <div className="portfolio-header">
+          <h3 className="section-title">Portfolio</h3>
+        </div>
+        
         <div className="portfolio-content">
           <div className="project-list">
-            <div className="project">
-              <h2 className="project-title">MA AS-Siroji</h2>
-              <p className="project-description">
-                Website MA As Siroji menyajikan informasi akademik dan non-akademik, termasuk publikasi berita, PPDB online, galeri kegiatan, kalender akademik, dan profil sekolah, dengan tampilan responsif dan mudah diakses di berbagai perangkat.
-              </p>
-              <a 
-                href="https://www.maassiroji.sch.id/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-button-link"
+            {projectData.map((project, index) => (
+              <div 
+                key={project.id} 
+                className="project"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                Lihat Projek
-              </a>
-            </div>
+                <div className="project-image-container">
+                  <img
+                    src={project.mainImage}
+                    alt={project.title}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                </div>
+                
+                <div className="project-content">
+                  <h2 className="project-title">{project.title}</h2>
+                  <p className="project-description">{project.description}</p>
+                  
+                  <div className="project-actions">
+                    <Link to={`/portfolio/${project.id}`} className="project-button-link">
+                      <span>Detail Projek</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+        
+        {/* Background decorative elements */}
+        <div className="bg-decoration bg-decoration-1"></div>
+        <div className="bg-decoration bg-decoration-2"></div>
+        <div className="bg-decoration bg-decoration-3"></div>
       </section>
     </>
   );
