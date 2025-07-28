@@ -12,12 +12,11 @@ function Experience() {
       date: "Jan 2025 - Mar 2025",
       role: "Content Creator",
       icon: "📱",
-      description: "Mengelola konten media sosial untuk meningkatkan brand awareness dan engagement. Membuat strategi konten yang menarik dan sesuai dengan target audience.",
       details: [
-        "Membuat konten visual dan video untuk Instagram dan TikTok",
-        "Menganalisis performa konten dan engagement rate",
-        "Berkolaborasi dengan tim marketing untuk strategi promosi",
-        "Meningkatkan follower hingga 25% dalam 3 bulan"
+        "Membuat konten visual dan video untuk instagram dan tiktok",
+        "Menganalisis performa konten",
+        "Berkolaborasi dengan tim untuk strategi promosi",
+        "Meningkatkan jumlah view serta follower"
       ]
     },
     {
@@ -27,12 +26,12 @@ function Experience() {
       date: "Okt 2024 - Jan 2025", 
       role: "Documentation Specialist",
       icon: "📋",
-      description: "Bertanggung jawab untuk pembuatan laporan proyek, dokumentasi kegiatan, dan penyusunan arsip digital yang terstruktur dan mudah diakses.",
       details: [
-        "Menyusun dokumentasi lengkap progress proyek mingguan",
-        "Mengelola arsip digital dengan sistem kategorisasi yang efisien",
+        "Menyusun dokumentasi lengkap progres proyek mingguan",
+        "Mengelola arsip digital yang efisien",
+        "Koordinasi dengan berbagai tim untuk kelengkapan data",
         "Membuat laporan evaluasi dan rekomendasi perbaikan",
-        "Koordinasi dengan berbagai stakeholder untuk kelengkapan data"
+        "Menyusun makalah untuk memenuhi tugas"
       ]
     },
     {
@@ -42,12 +41,10 @@ function Experience() {
       date: "Jun 2020 - Present",
       role: "Administrative Officer",
       icon: "👥",
-      description: "Mengelola administrasi anggota dalam kegiatan masyarakat, mengorganisir acara komunitas, dan membantu dalam program pemberdayaan pemuda.",
       details: [
-        "Mengelola database anggota dan kegiatan organisasi",
-        "Mengkoordinasikan kegiatan sosial dan pemberdayaan masyarakat",
-        "Menyusun proposal kegiatan dan laporan pertanggungjawaban",
-        "Memfasilitasi program pelatihan skill untuk pemuda lokal"
+        "Mencatat dan mengelola transaksi keuangan organisasi secara akurat.",
+        "Membuat laporan keuangan bulanan.",
+        "Menyusun anggaran kegiatan sosial dan pelaporan kepada pengurus."
       ]
     },
   ];

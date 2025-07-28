@@ -69,7 +69,7 @@ h1 {
 
 .welcome {
   font-size: 1.1rem;
-  color: #aaa;
+  color: #ffffff;
   opacity: 0;
   animation: fadeInUp 0.8s forwards 0.8s;
   max-width: 500px;
@@ -86,7 +86,7 @@ h1 {
 
 .contact-text {
   font-size: 1rem;
-  color: #aaa;
+  color: #ffffff;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -120,12 +120,12 @@ h1 {
 
 .email-button {
   background-color: #2563eb;
-  color: #fff;
+  color: #ffffff;
 }
 
 .email-button:hover {
   background-color: #000000;
-  color: #0051ff;
+  color: #2563eb;
   animation: buttonPulse 0.5s ease;
 }
 
@@ -233,7 +233,8 @@ h1 {
 /* Large Desktop Styles */
 @media (min-width: 1024px) {
   .hero {
-    padding: 2rem 4rem;
+    padding: 8rem;
+    margin-top: -4rem;
   }
 
   .hero-img img {

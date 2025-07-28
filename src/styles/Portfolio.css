@@ -24,7 +24,7 @@
   margin: 0 auto 1rem auto;
   padding: 0;
   color: #000000 !important;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 800;
   position: relative;
@@ -35,7 +35,7 @@
 
 /* Portfolio Content */
 .portfolio-content {
-  margin: 0 auto;
+  margin: -2rem;
   max-width: 1200px;
   position: relative;
   z-index: 2;
@@ -261,7 +261,7 @@
   }
   
   .portfolio-content {
-    max-width: 1400px;
+    max-width: 1000px;
   }
 }
 

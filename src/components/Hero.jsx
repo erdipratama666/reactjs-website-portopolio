@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
 
 const titles = [
-  "Web Developer",
-  "Mobile Developer", 
-  "Fullstack Developer",
+  "Programmer",
+  "Web Developer", 
+  "Tech Enthusiast",
 ];
 
 const Hero = () => {
@@ -37,7 +37,7 @@ const Hero = () => {
           </h2>
         </div>
         <p className="welcome">
-          Selamat datang di portofolio saya! Saya <span className="highlight-name">Erdi Pratama</span> yang sangat antusias menciptakan solusi web inovatif dan mewujudkan ide-ide menjadi nyata melalui kode.
+          Selamat datang! Saya <span className="highlight-name">Erdi Pratama.</span> Saya suka bikin website, dan belajar hal baru. Saya orangnya teliti, rapi, dan gampang kerja sama. Juga paham Microsoft Office dan beberapa framework kekinian.
         </p>
         <div className="contact-cta">
           <div className="contact-links">
