@@ -258,7 +258,7 @@
 /* Mobile Styles */
 @media (max-width: 480px) {
   .contact-container {
-    padding: 0 1rem;
+    padding: 0 1rem 2rem;
   }
   
   .contact-header h1 {

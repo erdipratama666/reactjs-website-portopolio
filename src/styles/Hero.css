@@ -233,8 +233,8 @@ h1 {
 /* Large Desktop Styles */
 @media (min-width: 1024px) {
   .hero {
-    padding: 8rem;
-    margin-top: -4rem;
+    padding: 2rem;
+    margin-top: -3rem;
   }
 
   .hero-img img {
@@ -318,7 +318,7 @@ h1 {
 /* Small Mobile Styles */
 @media (max-width: 480px) {
   .hero {
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
   }
 
   h1 {

@@ -104,6 +104,22 @@ body, html {
   background-color: #0b5ed7;
 }
 
+.download-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1e40af;
+}
+
 @media (max-width: 640px) {
   .detail-container {
     padding-left: 1rem;

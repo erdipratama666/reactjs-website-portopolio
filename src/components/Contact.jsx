@@ -64,8 +64,6 @@ const Contact = () => {
       <div className="contact-page">
         <div className="contact-container">
           <div className="contact-header">
-            <h1>Hubungi Kami</h1>
-            <p>Kami siap membantu Anda. Silakan isi form di bawah ini atau hubungi kami langsung.</p>
           </div>
           <div className="contact-content">
             <div className="contact-info">

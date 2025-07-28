@@ -1,226 +1,132 @@
 const tugas2 = {
   id: '2',
-  title: 'Analisis Jurnal: Sistem Pakar Penentuan Bakat Anak dengan Metode Forward Chaining',
+  title: 'Sistem Pakar untuk Identifikasi Bakat Anak Usia Dini Menggunakan Forward Chaining',
+  authors: [
+    'ADE HUSNI MUBAROQ   22110002',
+    'ERDI PRATAMA   22110026',
+    'GHALIH R   22110035',
+    'MUHAMMAD NATHAN F   22110051'
+  ],
   sections: [
     {
-      title: '1. Identifikasi Problem',
+      title: 'BAB I',
       content: [
         {
-          type: 'paragraph',
-          text: 'Penelitian ini mengangkat permasalahan penting dalam dunia pendidikan anak usia dini:'
+          type: 'section',
+          title: '1.1 Latar Belakang',
+          text: 'Masa kanak-kanak usia 4–6 tahun adalah masa emas perkembangan anak. Banyak potensi anak tidak dikenali karena keterbatasan pemahaman orang tua/guru dan kurangnya tenaga ahli. Sekitar 40% anak berbakat tidak berprestasi optimal. Teknologi seperti sistem pakar diperlukan untuk membantu proses identifikasi bakat yang akurat dan efisien.'
         },
         {
-          type: 'list-title',
-          text: 'Masalah utama yang dihadapi:'
-        },
-        {
-          type: 'list',
+          type: 'section',
+          title: '1.2 Rumusan Masalah',
           items: [
-            'Masih banyak orang tua dan guru yang belum mengetahui bakat pada anak mereka',
-            'Terbatasnya jumlah pakar untuk berkonsultasi tentang bakat anak',
-            'Kurang lebih 40% anak berbakat tidak mampu berprestasi sesuai kemampuan (Lucy)',
-            'Anak berbakat tergolong sebagai underachiever karena tidak teridentifikasi'
+            'Bagaimana cara kerja sistem pakar dalam mengidentifikasi bakat anak?',
+            'Apa saja komponen utama dalam sistem pakar?',
+            'Bagaimana sistem pakar membantu orang tua dan guru?',
+            'Metode apa yang digunakan dalam sistem berbasis gejala ini?'
           ]
         },
         {
-          type: 'paragraph',
-          text: 'Target penelitian: Anak TK usia 4-6 tahun karena merupakan masa penting untuk meletakkan dasar bagi perkembangan di masa dewasa (Santrock dan Yussen).'
-        }
-      ]
-    },
-    {
-      title: '2. Metodologi dan Cara Penyelesaian',
-      content: [
-        {
-          type: 'paragraph',
-          text: 'Penelitian menggunakan sistem pakar dengan metode forward chaining untuk mengatasi keterbatasan pakar manusia.'
-        },
-        {
-          type: 'list-title',
-          text: 'Tahapan penelitian:'
-        },
-        {
-          type: 'ordered-list',
+          type: 'section',
+          title: '1.3 Tujuan Penulisan',
           items: [
-            'Tahap Inisialisasi: Identifikasi masalah melalui wawancara dengan pakar psikologi anak, guru TK, orang tua, dan studi pustaka',
-            'Tahap Analisa dan Perancangan: Analisa kriteria setiap bakat, penentuan variabel, dan pembuatan rule',
-            'Tahap Implementasi dan Pengujian: Pembuatan sistem pakar dan pengujian akurasi dengan 100 data sampel'
-          ]
-        },
-        {
-          type: 'list-title',
-          text: 'Alasan pemilihan Forward Chaining:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Teknik inferensi bottom-up reasoning yang terbukti sukses',
-            'Dimulai dari data/fakta yang ada menuju kesimpulan',
-            'Data menentukan aturan mana yang harus dijalankan',
-            'Cocok untuk sistem identifikasi berbasis gejala/indikator'
+            'Menjelaskan konsep dasar sistem pakar dalam identifikasi bakat anak.',
+            'Mendeskripsikan rancangan sistem pakar untuk mengenali bakat anak.',
+            'Memberikan gambaran pemanfaatan sistem dalam pendidikan.'
           ]
         }
       ]
     },
     {
-      title: '3. Knowledge Base dan Struktur Sistem',
+      title: 'BAB II',
       content: [
         {
-          type: 'paragraph',
-          text: 'Sistem menggunakan standar bakat anak menurut US Office Of Education (USOE) America.'
+          type: 'section',
+          title: '2.1 Pengertian',
+          text: 'Sistem pakar adalah sistem komputer yang meniru pemikiran seorang ahli. Komponennya: basis pengetahuan, mesin inferensi, dan antarmuka pengguna.'
         },
         {
-          type: 'list-title',
-          text: 'Enam kategori bakat USOE America:'
+          type: 'section',
+          title: '2.2 Tujuan dan Sasaran Sistem',
+          text: 'Membantu identifikasi bakat anak usia 4–6 tahun secara sistematis dan terukur, fokus pada aspek kognitif, sosial, motorik, dan kreativitas.'
         },
         {
-          type: 'list',
-          items: [
-            'K1: Intelektual Umum (14 variabel)',
-            'K2: Akademik Khusus (11 variabel)', 
-            'K3: Berpikir Kreatif-Produktif (23 variabel)',
-            'K4: Kemampuan Memimpin (14 variabel)',
-            'K5: Bidang Seni dan Pertunjukan (7 variabel)',
-            'K6: Kemampuan Psikomotor (14 variabel)'
+          type: 'section',
+          title: '2.3 Metode Forward Chaining',
+          text: 'Metode inferensi bottom-up. Dimulai dari fakta/data menuju kesimpulan. Cocok untuk sistem berbasis aturan seperti ini.'
+        },
+        {
+          type: 'section',
+          title: '2.4 Kategori dan Indikator Bakat',
+          list: [
+            '1. Intelektual Umum',
+            '2. Akademik Khusus',
+            '3. Berpikir Kreatif dan Produktif',
+            '4. Kepemimpinan',
+            '5. Seni Visual dan Pertunjukan',
+            '6. Psikomotorik'
           ]
         },
         {
-          type: 'list-title',
-          text: 'Komponen knowledge base:'
-        },
-        {
-          type: 'list',
+          type: 'section',
+          title: '2.5 Struktur Sistem dan Komponen',
           items: [
-            '27 indikator bakat',
-            '83 variabel pengujian',
-            '33 rules untuk inferensi',
-            'Contoh rule: if C1 and C2 and C3 then I1'
+            'Antarmuka pengguna untuk input perilaku anak',
+            'Mesin inferensi menggunakan forward chaining',
+            'Basis pengetahuan berisi: 27 indikator, 83 variabel, 33 aturan',
+            'Contoh rule: IF C1 AND C2 AND C3 → THEN I1'
           ]
         }
       ]
     },
     {
-      title: '4. Implementasi dan Antarmuka Sistem',
+      title: 'BAB III',
       content: [
         {
-          type: 'list-title',
-          text: 'Komponen sistem yang dibangun:'
+          type: 'section',
+          title: '3.1 Proses dan Validasi Sistem',
+          text: 'Input data perilaku anak diproses dengan forward chaining untuk menemukan kategori bakat. Validasi dilakukan dengan 100 data dari TK di Pekanbaru, hasilnya menunjukkan akurasi tinggi.'
         },
         {
-          type: 'list',
+          type: 'section',
+          title: '3.2 Kelebihan dan Keterbatasan',
+          subSections: {
+            kelebihan: [
+              'Menggunakan standar internasional USOE',
+              'Fokus pada anak usia dini',
+              'Mampu mengenali 6 kategori bakat'
+            ],
+            keterbatasan: [
+              'Hanya untuk anak usia 4–6 tahun',
+              'Input data masih manual dan kompleks',
+              'Belum diuji pada budaya berbeda',
+              'Akurasi tergantung input pengguna'
+            ]
+          }
+        },
+        {
+          type: 'section',
+          title: '3.3 Kontribusi Penelitian',
           items: [
-            'Form identifikasi bakat anak untuk input variabel',
-            'Inference engine dengan algoritma forward chaining',
-            'Knowledge base berisi 33 rules',
-            'Form hasil identifikasi untuk menampilkan output'
-          ]
-        },
-        {
-          type: 'list-title',
-          text: 'Cara kerja sistem:'
-        },
-        {
-          type: 'ordered-list',
-          items: [
-            'Pengguna memilih variabel sesuai kondisi anak',
-            'Sistem melakukan inferensi menggunakan forward chaining',
-            'Rules dijalankan berdasarkan variabel yang dipilih',
-            'Hasil identifikasi kategori bakat ditampilkan'
+            'Membantu guru/orang tua mengenali potensi anak',
+            'Mencegah kegagalan prestasi anak berbakat',
+            'Memberikan dasar untuk intervensi lebih cepat dan tepat'
           ]
         }
       ]
     },
     {
-      title: '5. Evaluasi dan Validasi Sistem',
+      title: 'BAB IV',
       content: [
         {
-          type: 'paragraph',
-          text: 'Pengujian dilakukan untuk mengukur akurasi sistem pakar yang dikembangkan.'
+          type: 'section',
+          title: '4.1 Kesimpulan',
+          text: 'Sistem pakar dengan metode forward chaining efektif membantu identifikasi bakat anak secara terstruktur. Meskipun masih ada tantangan seperti validasi budaya dan kompleksitas input, sistem ini berpotensi besar dalam mendukung pendidikan anak usia dini.'
         },
         {
-          type: 'list-title',
-          text: 'Metode evaluasi:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Sampel: 100 data anak dari TK Negeri Pembina II Pekanbaru',
-            'Perbandingan hasil deteksi sistem vs pakar manusia',
-            'Rumus akurasi: (Jumlah Benar / Jumlah Data) × 100%',
-            'Pengukuran efektivitas forward chaining'
-          ]
-        },
-        {
-          type: 'conclusion',
-          text: 'Hasil: Sistem berhasil mengidentifikasi bakat anak dan mesin inferensi forward chaining terbukti efektif untuk standar USOE America.'
-        }
-      ]
-    },
-    {
-      title: '6. Kelebihan dan Keterbatasan',
-      content: [
-        {
-          type: 'list-title',
-          text: 'Kelebihan sistem:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Menggunakan standar internasional USOE America',
-            'Mengatasi keterbatasan jumlah pakar manusia',
-            'Fokus pada usia kritis 4-6 tahun',
-            'Sistem komprehensif dengan 6 kategori bakat',
-            'Implementasi forward chaining yang terbukti efektif',
-            'Dapat diakses kapan saja tanpa terbatas waktu konsultasi'
-          ]
-        },
-        {
-          type: 'list-title',
-          text: 'Keterbatasan sistem:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Hanya untuk anak usia 4-6 tahun (TK)',
-            'Memerlukan input manual 83 variabel',
-            'Akurasi sangat bergantung keakuratan input pengguna',
-            'Belum ada validasi lintas budaya di luar Amerika',
-            'Tidak dapat menangani kasus ambiguitas atau borderline'
-          ]
-        }
-      ]
-    },
-    {
-      title: '7. Kontribusi dan Implikasi Penelitian',
-      content: [
-        {
-          type: 'list-title',
-          text: 'Kontribusi teoritis:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Implementasi forward chaining dalam psikologi anak',
-            'Adaptasi standar USOE America untuk konteks Indonesia',
-            'Pengembangan knowledge base komprehensif bakat anak'
-          ]
-        },
-        {
-          type: 'list-title',
-          text: 'Kontribusi praktis:'
-        },
-        {
-          type: 'list',
-          items: [
-            'Solusi praktis untuk identifikasi bakat anak',
-            'Alat bantu untuk orang tua dan guru TK',
-            'Pencegahan underachievement pada anak berbakat',
-            'Dasar untuk program pendidikan yang sesuai bakat'
-          ]
-        },
-        {
-          type: 'conclusion',
-          text: 'Sistem ini dapat menjadi alat bantu efektif dalam pengembangan potensi anak sejak usia dini dan mendukung program pendidikan yang lebih personal dan sesuai dengan bakat masing-masing anak.'
+          type: 'section',
+          title: '4.2 Saran',
+          text: 'Pengembangan sistem perlu melibatkan psikolog profesional, menyimpan riwayat hasil untuk evaluasi jangka panjang, dan dapat mengolah data secara personal.'
         }
       ]
     }

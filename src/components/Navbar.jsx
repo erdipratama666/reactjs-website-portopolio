@@ -7,9 +7,7 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setMenuOpen(prev => !prev);
-  };
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
@@ -21,68 +19,59 @@ function Navbar() {
       navigate('/', { replace: false });
       setTimeout(() => {
         const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
       const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <nav role="navigation" className="navbar">
-      <div className="wrapper">
-        <div className="logo-container">
-          <div className="logo">
-            <p className="byline">ERDI PRATAMA</p>
-          </div>
-        </div>
+    <nav className="navbar pro-navbar" role="navigation">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo" aria-label="Home">
+          <span className="logo-text">ERDI PRATAMA</span>
+        </Link>
         <button
-          className={`hamburger ${menuOpen ? 'active' : ''}`}
+          className={`navbar-hamburger ${menuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span />
+          <span />
+          <span />
         </button>
-        <div className={`menu ${menuOpen ? 'open' : ''}`}>
+        <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li>
-              <button className="link-button" onClick={() => handleScrollTo('about')}>
+              <button className="navbar-link" onClick={() => handleScrollTo('about')}>
                 About
               </button>
             </li>
             <li>
-              <button className="link-button" onClick={() => handleScrollTo('portfolio')}>
+              <button className="navbar-link" onClick={() => handleScrollTo('portfolio')}>
                 Portfolio
               </button>
             </li>
             <li>
-              <Link to="/experience" onClick={() => setMenuOpen(false)}>
+              <Link to="/experience" className="navbar-link" onClick={() => setMenuOpen(false)}>
                 Experience
               </Link>
             </li>
             <li>
-              <Link to="/blog" onClick={() => setMenuOpen(false)}>
+              <Link to="/blog" className="navbar-link" onClick={() => setMenuOpen(false)}>
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              <Link to="/contact" className="navbar-link" onClick={() => setMenuOpen(false)}>
                 Contact
               </Link>
             </li>
             <li>
-              <Link to="/tugas" onClick={() => setMenuOpen(false)}>
+              <Link to="/tugas" className="navbar-link" onClick={() => setMenuOpen(false)}>
                 Tugas
               </Link>
             </li>

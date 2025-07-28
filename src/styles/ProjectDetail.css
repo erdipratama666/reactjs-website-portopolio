@@ -19,7 +19,6 @@
 }
 
 
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -66,7 +65,6 @@
   font-weight: 800;
   margin: 0 0 1.5rem 0;
   line-height: 1.2;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-meta {

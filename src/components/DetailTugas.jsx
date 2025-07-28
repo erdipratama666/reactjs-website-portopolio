@@ -77,6 +77,51 @@ function DetailTugas() {
                     {item.text}
                   </p>
                 );
+              } else if (item.type === 'section') {
+                return (
+                  <div key={contentIndex} className="section-content">
+                    {item.title && <h3>{item.title}</h3>}
+                    {item.text && <p>{item.text}</p>}
+                    {item.items && (
+                      <ul>
+                        {item.items.map((itm, idx) => (
+                          <li key={idx}>{itm}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {item.list && (
+                      <ul>
+                        {item.list.map((itm, idx) => (
+                          <li key={idx}>{itm}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {item.subSections && (
+                      <>
+                        {item.subSections.kelebihan && (
+                          <>
+                            <strong>Kelebihan:</strong>
+                            <ul>
+                              {item.subSections.kelebihan.map((itm, idx) => (
+                                <li key={idx}>{itm}</li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        {item.subSections.keterbatasan && (
+                          <>
+                            <strong>Keterbatasan:</strong>
+                            <ul>
+                              {item.subSections.keterbatasan.map((itm, idx) => (
+                                <li key={idx}>{itm}</li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </div>
+                );
               }
               return null;
             })}
@@ -97,6 +142,22 @@ function DetailTugas() {
                 Kunjungi Website Sistem Pakar
               </a>
             </p>
+          </div>
+        )}
+
+        {/* DOWNLOAD MAKALAH KHUSUS TUGAS 2 */}
+        {currentTugas.id === '2' && (
+          <div className="detail-section">
+            <h2 className="section-heading">Unduh Makalah</h2>
+            <a
+              href="/assets/makalah-spakar.pdf"
+              download="makalah-spakar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-button"
+            >
+              📄 Download PDF Makalah
+            </a>
           </div>
         )}
 

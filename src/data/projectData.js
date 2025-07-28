@@ -13,7 +13,7 @@ const projectData = [
   {
     id: 1,
     title: 'Website Sekolah MA As-Siroji',
-    description: 'Website sekolah MA As-Siroji memudahkan siswa dan guru dalam mengakses informasi penting seperti profil sekolah, pendaftaran online, dan data siswa.',
+    description: 'Portal online MA As-Siroji yang menyediakan informasi sekolah dan layanan pendaftaran siswa.',
     mainImage: homeImg,
     images: [homeImg, profileImg, ppdbImg, sejarahImg, visimisiImg],
     url: 'https://www.maassiroji.sch.id/'
@@ -21,7 +21,7 @@ const projectData = [
   {
     id: 2,
     title: 'Sistem Pakar Penentuan Bakat',
-    description: 'Aplikasi web sistem pakar untuk membantu siswa mengenali potensi bakat mereka menggunakan metode Forward Chaining.',
+    description: 'Platform digital yang membantu orangtua dan guru mengidentifikasi bakat anak.',
     mainImage: homeSpakarImg,
     images: [homeSpakarImg, dataSpakarImg, indikatorSpakarImg, konsultasiSpakarImg],
     url: 'https://sistem-pakar-bakat.vercel.app/'

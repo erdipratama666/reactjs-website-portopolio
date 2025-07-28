@@ -6,13 +6,6 @@ const blogList = [
     date: '2025-06-01',
     author: 'Erdi Pratama'
   },
-  { 
-    id: '2', 
-    title: 'Blog 2: Coming Soon',
-    excerpt: 'Artikel tentang topik menarik lainnya akan segera hadir.',
-    date: '2024-12-20',
-    author: 'Erdi Pratama'
-  },
   // tambahkan blog lainnya
 ];
 
