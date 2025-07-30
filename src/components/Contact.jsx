@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+import SEO from './SEO';
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -24,9 +25,7 @@ const Contact = () => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
 
@@ -35,9 +34,7 @@ const Contact = () => {
       if (response.ok) {
         setStatus('success');
         setForm({ nama: '', nohp: '', email: '', deskripsi: '' });
-        
-        // Optional: Buka WhatsApp setelah berhasil
-        // openWhatsApp();
+        // openWhatsApp(); // opsional
       } else {
         setStatus('error');
         console.error('Error:', data.message);
@@ -50,9 +47,8 @@ const Contact = () => {
     }
   };
 
-  // Function untuk buka WhatsApp (alternatif)
   const openWhatsApp = () => {
-    const phoneNumber = '6283867550225'; // nomor Anda tanpa +
+    const phoneNumber = '6283867550225';
     const message = `Halo, saya ${form.nama}.\n\nEmail: ${form.email}\nPesan: ${form.deskripsi}`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
@@ -60,34 +56,48 @@ const Contact = () => {
 
   return (
     <>
+      <SEO 
+        title="Kontak | Erdi Pratama"
+        description="Hubungi Erdi Pratama untuk konsultasi dan kolaborasi proyek pengembangan website. Tersedia layanan fullstack development dengan React.js, Node.js, dan teknologi modern lainnya."
+        keywords="kontak erdi pratama, fullstack developer bandung, jasa pembuatan website, konsultasi web development, react developer indonesia"
+        url="/contact"
+      />
       <Navbar />
-      <div className="contact-page">
+      <main className="contact-page" role="main">
         <div className="contact-container">
-          <div className="contact-header">
-          </div>
+          <header className="contact-header">
+            <h1>Hubungi Saya</h1>
+            <p>Silakan isi formulir di bawah ini atau hubungi langsung melalui kontak yang tersedia.</p>
+          </header>
+
           <div className="contact-content">
-            <div className="contact-info">
-              <h3>Informasi Kontak</h3>
-              <div className="info-item">
-                <h4>Alamat</h4>
-                <p>Kp. Leuwimelang rt02 rw06<br />Bandung, Jawa Barat 40238</p>
-              </div>
-              <div className="info-item">
-                <h4>Telepon</h4>
-                <p>+62 838 6755 0225</p>
-              </div>
-              <div className="info-item">
-                <h4>Email</h4>
-                <p>erdipratama18@gmail.com</p>
-              </div>
-              <div className="info-item">
-                <h4>Jam Operasional</h4>
-                <p>Senin - Jumat: 08:00 - 17:00<br />Sabtu: 08:00 - 12:00</p>
-              </div>
-            </div>
-            <div className="contact-form-container">
-              <h3>Kirim Pesan</h3>
-              <form className="contact-form" onSubmit={handleSubmit}>
+            <section className="contact-info" aria-label="Informasi kontak">
+              <h2>Informasi Kontak</h2>
+              <address>
+                <div className="info-item">
+                  <strong>Alamat:</strong><br />
+                  Kp. Leuwimelang RT02 RW06<br />
+                  Bandung, Jawa Barat 40238
+                </div>
+                <div className="info-item">
+                  <strong>Telepon:</strong><br />
+                  <a href="tel:+6283867550225">+62 838 6755 0225</a>
+                </div>
+                <div className="info-item">
+                  <strong>Email:</strong><br />
+                  <a href="mailto:erdipratama18@gmail.com">erdipratama18@gmail.com</a>
+                </div>
+                <div className="info-item">
+                  <strong>Jam Operasional:</strong><br />
+                  Senin - Jumat: 08:00 - 17:00<br />
+                  Sabtu: 08:00 - 12:00
+                </div>
+              </address>
+            </section>
+
+            <section className="contact-form-container" aria-label="Formulir kontak">
+              <h2>Kirim Pesan</h2>
+              <form className="contact-form" onSubmit={handleSubmit} noValidate>
                 <div className="form-group">
                   <label htmlFor="nama">Nama Lengkap</label>
                   <input
@@ -109,6 +119,7 @@ const Contact = () => {
                     value={form.nohp}
                     onChange={handleChange}
                     placeholder="Contoh: 08123456789"
+                    pattern="[0-9]+"
                     required
                   />
                 </div>
@@ -134,39 +145,30 @@ const Contact = () => {
                     rows={5}
                     placeholder="Tuliskan pesan Anda di sini..."
                     required
-                  />
+                  ></textarea>
                 </div>
-                
+
                 <div className="form-buttons">
                   <button type="submit" className="submit-btn" disabled={loading}>
-                    {loading ? 'Mengirim...' : 'Kirim Email'}
-                  </button>
-                  
-                  <button 
-                    type="button" 
-                    className="contact-btn" 
-                    onClick={openWhatsApp}
-                    disabled={!form.nama || !form.deskripsi}
-                  >
-                    Kirim WhatsApp
+                    {loading ? 'Mengirim...' : 'Kirim'}
                   </button>
                 </div>
 
                 {status === 'success' && (
-                  <div className="status-message success">
+                  <div className="status-message success" role="alert">
                     ✅ Pesan berhasil dikirim ke email!
                   </div>
                 )}
                 {status === 'error' && (
-                  <div className="status-message error">
+                  <div className="status-message error" role="alert">
                     ❌ Gagal mengirim pesan. Silakan coba lagi.
                   </div>
                 )}
               </form>
-            </div>
+            </section>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

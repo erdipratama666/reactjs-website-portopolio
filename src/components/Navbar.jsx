@@ -46,6 +46,11 @@ function Navbar() {
         <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li>
+              <button className="navbar-link" onClick={() => handleScrollTo('home')}>
+                Home
+              </button>
+            </li>
+            <li>
               <button className="navbar-link" onClick={() => handleScrollTo('about')}>
                 About
               </button>

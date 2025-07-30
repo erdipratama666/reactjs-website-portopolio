@@ -1,52 +1,87 @@
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
-  title = 'Erdi Pratama | Fullstack Developer',
-  description = 'Portofolio Erdi Pratama, Fullstack Developer yang berfokus pada pengembangan website modern dengan React.js',
-  keywords = 'Erdi Pratama, fullstack developer, portofolio, react developer, frontend, backend',
+  title = 'Erdi Pratama | Web Developer',
+  description = 'Erdi Pratama, seorang Web Developer yang fokus di bidang pengembangan web dengan teknologi modern',
+  keywords = 'Erdi Pratama, web developer, portfolio, fullstack developer, React.js, JavaScript',
   image = '/og-image.jpg',
-  url = '/'
+  url = '/',
+  robots = 'index, follow'
 }) => {
-  const fullUrl = `https://www.erdipratama.my.id${url}`;
-  const fullImage = `https://www.erdipratama.my.id${image}`;
+  const baseUrl = 'https://www.erdipratama.my.id';
+  const fullUrl = `${baseUrl}${url}`;
+  const fullImage = `${baseUrl}${image}`;
 
-  const jsonLd = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Erdi Pratama",
-    "url": "https://www.erdipratama.my.id",
-    "image": "https://www.erdipratama.my.id/profile-picture.webp",
-    "sameAs": [
-      "https://www.instagram.com/rditamaa",
-      "https://www.tiktok.com/@erdipratamaa"
-    ],
-    "jobTitle": "Fullstack Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Zamal Collection"
-    }
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Erdi Pratama",
+        "url": baseUrl,
+        "image": `${baseUrl}/profile-picture.webp`,
+        "sameAs": [
+          "https://www.instagram.com/rditamaa",
+          "https://www.tiktok.com/@erdipratamaa"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Zamal Collection"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Erdi Pratama | Web Developer",
+        "url": baseUrl,
+        "inLanguage": "id",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${baseUrl}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": title,
+        "url": fullUrl,
+        "description": description,
+        "inLanguage": "id"
+      }
+    ]
   };
 
   return (
-    <Helmet>
+    <Helmet titleTemplate="%s | Erdi Pratama">
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content="Erdi Pratama" />
+      <meta name="robots" content={robots} />
+      <meta httpEquiv="Content-Language" content="id" />
+      <meta name="theme-color" content="#ffffff" />
       <link rel="canonical" href={fullUrl} />
 
+      {/* Open Graph (Facebook, LinkedIn, WhatsApp) */}
       <meta property="og:type" content="website" />
+      <meta property="og:locale" content="id_ID" />
+      <meta property="og:site_name" content="Erdi Pratama" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:url" content={fullUrl} />
 
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:site" content="@erdipratamaa" />
+      <meta name="twitter:creator" content="@erdipratamaa" />
 
+      {/* Structured Data JSON-LD */}
       <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
+        {JSON.stringify(structuredData)}
       </script>
     </Helmet>
   );

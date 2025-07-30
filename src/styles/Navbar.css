@@ -97,18 +97,21 @@
   .navbar-hamburger {
     display: flex;
   }
-  .navbar-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.07);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem 2rem;
-    display: none;
-  }
+.navbar-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.6); /* Transparan */
+  backdrop-filter: blur(10px); /* Efek blur modern */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  display: none;
+  transition: background 0.3s ease;
+}
+
   .navbar-menu.open {
     display: flex;
   }
@@ -120,6 +123,7 @@
   .navbar-link {
     width: 100%;
     text-align: left;
+    font-size: 1.1rem;
   }
 }
 

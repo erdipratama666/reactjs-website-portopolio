@@ -9,36 +9,36 @@ function Experience() {
       title: "Content Creator",
       company: "Zamal Collection",
       duration: "Jan 2025 - Mar 2025",
-      date: "Jan 2025 - Mar 2025",
+      date: "2025-01 - 2025-03",
       role: "Content Creator",
       icon: "📱",
       details: [
-        "Membuat konten visual dan video untuk instagram dan tiktok",
-        "Menganalisis performa konten",
-        "Berkolaborasi dengan tim untuk strategi promosi",
-        "Meningkatkan jumlah view serta follower"
+        "Membuat konten visual dan video untuk Instagram dan TikTok.",
+        "Menganalisis performa konten.",
+        "Berkolaborasi dengan tim untuk strategi promosi.",
+        "Meningkatkan jumlah view serta followers."
       ]
     },
     {
       title: "Documentation",
       company: "Project MA AS-Siroji",
       duration: "Okt 2024 - Jan 2025",
-      date: "Okt 2024 - Jan 2025", 
+      date: "2024-10 - 2025-01",
       role: "Documentation Specialist",
       icon: "📋",
       details: [
-        "Menyusun dokumentasi lengkap progres proyek mingguan",
-        "Mengelola arsip digital yang efisien",
-        "Koordinasi dengan berbagai tim untuk kelengkapan data",
-        "Membuat laporan evaluasi dan rekomendasi perbaikan",
-        "Menyusun makalah untuk memenuhi tugas"
+        "Menyusun dokumentasi lengkap progres proyek mingguan.",
+        "Mengelola arsip digital yang efisien.",
+        "Koordinasi dengan berbagai tim untuk kelengkapan data.",
+        "Membuat laporan evaluasi dan rekomendasi perbaikan.",
+        "Menyusun makalah untuk memenuhi tugas."
       ]
     },
     {
       title: "Administration",
       company: "Karang Taruna",
       duration: "Jun 2020 - Present",
-      date: "Jun 2020 - Present",
+      date: "2020-06 - Present",
       role: "Administrative Officer",
       icon: "👥",
       details: [
@@ -73,20 +73,17 @@ function Experience() {
                   itemScope
                   itemType="https://schema.org/WorkExperience"
                 >
-                  <span className="date" itemProp="datePosted">{job.date}</span>
+                  <meta itemProp="startDate" content={job.date.split(' - ')[0]} />
+                  <meta itemProp="endDate" content={job.date.split(' - ')[1]} />
+                  <span className="date">{job.duration}</span>
                   <h3 className="role" itemProp="jobTitle">
                     <span className="timeline-icon">{job.icon}</span>
                     {job.role}
                   </h3>
-                  <h4 className="company" itemProp="hiringOrganization">
-                    {job.company}
-                  </h4>
-                  <p className="description" itemProp="description">
-                    {job.description}
-                  </p>
+                  <h4 className="company" itemProp="hiringOrganization">{job.company}</h4>
                   <ul className="details-list">
-                    {job.details.map((detail, detailIndex) => (
-                      <li key={detailIndex}>{detail}</li>
+                    {job.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
                     ))}
                   </ul>
                 </div>

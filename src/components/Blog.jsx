@@ -9,31 +9,35 @@ export default function Blog() {
     <>
       <SEO
         title="Daftar Blog | Erdi Pratama"
-        description="Kumpulan artikel dan blog karya Erdi Pratama tentang teknologi, cybercrime, dan topik edukatif lainnya."
+        description="Kumpulan artikel dan blog karya Erdi Pratama tentang teknologi, cybercrime, pengembangan web, dan topik edukatif lainnya."
         url="/blog"
+        keywords="blog teknologi, artikel cybercrime, blog edukasi, blog Erdi Pratama"
       />
       <Navbar />
-      <div className="tugas-container">
+      <main className="tugas-container">
         <h1 className="tugas-heading">Daftar Blog</h1>
-        <div className="tugas-grid">
+        <section className="tugas-grid" aria-label="Daftar artikel blog">
           {blogList.map((blog) => (
             <Link
               key={blog.id}
               to={`/blog/${blog.id}`}
               className="tugas-card"
+              aria-label={`Baca artikel: ${blog.title}`}
             >
-              <div className="blog-card-content">
+              <article className="blog-card-content">
                 <h2 className="tugas-title">{blog.title}</h2>
                 <p className="blog-excerpt">{blog.excerpt}</p>
-                <div className="blog-meta">
-                  <span className="blog-date">{blog.date}</span>
-                  <span className="blog-author">oleh {blog.author}</span>
-                </div>
-              </div>
+                <footer className="blog-meta">
+                  <time className="blog-date" dateTime={blog.date}>
+                    {blog.date}
+                  </time>
+                  <span className="blog-author"> oleh {blog.author}</span>
+                </footer>
+              </article>
             </Link>
           ))}
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

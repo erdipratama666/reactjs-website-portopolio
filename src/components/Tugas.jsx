@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import SEO from './SEO';
-import tugasData from '../tugasData';
+import tugasData from '../data';
 import '../styles/Tugas.css';
 
 export default function Tugas() {

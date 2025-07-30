@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import tugasData from '../tugasData';
+import Data from '../data';
 import Navbar from './Navbar';
 import SEO from './SEO';
 import '../styles/DetailTugas.css';
@@ -8,7 +8,7 @@ function DetailTugas() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const currentTugas = tugasData[id];
+  const currentTugas = Data[id];
 
   if (!currentTugas) {
     return (

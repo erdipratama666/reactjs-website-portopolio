@@ -23,11 +23,13 @@ const Hero = () => {
 
   return (
     <section
+      id="home"
       className="hero"
       data-testid="hero-section"
       itemScope
       itemType="https://schema.org/Person"
     >
+
       <div className="hero-text">
         <p className="intro">Hello,</p>
         <h1 itemProp="name">I'm Erdi Pratama</h1>
