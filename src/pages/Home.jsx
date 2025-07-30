@@ -10,7 +10,11 @@ import SEO from '../components/SEO';
 function Home() {
   return (
     <>
-      <SEO />
+      <SEO
+        title="Erdi Pratama | Web Developer"
+        description="Erdi Pratama adalah Web Developer yang berfokus pada pengembangan website dengan JavaScript dan framework modern."
+        url="/"
+      />
       <Navbar />
       <Hero />
       <About />

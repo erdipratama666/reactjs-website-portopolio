@@ -2,8 +2,8 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
   title = 'Erdi Pratama | Web Developer',
-  description = 'Erdi Pratama, seorang Web Developer yang fokus di bidang pengembangan web dengan teknologi modern',
-  keywords = 'Erdi Pratama, web developer, portfolio, fullstack developer, React.js, JavaScript',
+  description = 'Erdi Pratama adalah Web Developer yang berfokus pada pengembangan website dengan JavaScript dan framework modern.',
+  keywords = 'Erdi Pratama, web developer, JavaScript, React, portfolio, fullstack developer, frontend',
   image = '/og-image.jpg',
   url = '/',
   robots = 'index, follow'
@@ -25,6 +25,7 @@ const SEO = ({
           "https://www.tiktok.com/@erdipratamaa"
         ],
         "jobTitle": "Web Developer",
+        "description": "Erdi Pratama adalah Web Developer yang berfokus pada pengembangan website dengan JavaScript dan framework modern.",
         "worksFor": {
           "@type": "Organization",
           "name": "Zamal Collection"

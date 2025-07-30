@@ -20,7 +20,10 @@ function App() {
     <Router>
       <Helmet>
         <title>Erdi Pratama | Web Developer</title>
-        <meta name="description" content="Portofolio Erdi Pratama, Web Developer dengan React.js" />
+        <meta
+          name="description"
+          content="Erdi Pratama adalah Web Developer yang berfokus pada pengembangan website dengan JavaScript dan framework modern."
+        />
       </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,8 +32,8 @@ function App() {
         <Route path="/blog/:id" element={<DetailBlog />} />
         <Route path="/tugas" element={<Tugas />} />
         <Route path="/tugas/:id" element={<DetailTugas />} />
-        <Route path="/portfolio" element={<Portfolio />} /> 
-        <Route path="/portfolio/:id" element={<ProjectDetail />} />   
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:id" element={<ProjectDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
