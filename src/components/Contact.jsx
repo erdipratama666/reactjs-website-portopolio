@@ -23,13 +23,22 @@ const Contact = () => {
     setStatus('');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+const response = await fetch('https://reactjs-website-portopolio-1qxmt1ltc-erdipratamas-projects.vercel.app/api/contact', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(form),
+});
 
-      const data = await response.json();
+
+      let data = {};
+try {
+  data = await response.json();
+} catch {
+  data = { message: 'Tidak ada response JSON' };
+}
+
 
       if (response.ok) {
         setStatus('success');
