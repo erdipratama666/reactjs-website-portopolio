@@ -133,7 +133,8 @@ const ProjectDetail = () => {
                   Kunjungi Website
                 </a>
                 <button
-                  onClick={() => navigate('/portfolio')}
+                  onClick={() => navigate('/')}
+                  
                   className="action-button secondary"
                 >
                   Kembali
