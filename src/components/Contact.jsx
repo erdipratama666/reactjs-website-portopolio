@@ -23,34 +23,38 @@ const Contact = () => {
     setStatus('');
 
     try {
-const response = await fetch('https://reactjs-website-portopolio-1qxmt1ltc-erdipratamas-projects.vercel.app/api/contact', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(form),
-});
-
+      // Gunakan URL relatif, bukan absolute URL
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
 
       let data = {};
-try {
-  data = await response.json();
-} catch {
-  data = { message: 'Tidak ada response JSON' };
-}
-
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        console.error('Error parsing JSON:', jsonError);
+        data = { message: 'Tidak ada response JSON' };
+      }
 
       if (response.ok) {
         setStatus('success');
         setForm({ nama: '', nohp: '', email: '', deskripsi: '' });
-        // openWhatsApp(); // opsional
+        
+        // Auto-open WhatsApp dengan data yang sudah diisi
+        setTimeout(() => {
+          openWhatsApp();
+        }, 1000);
       } else {
         setStatus('error');
-        console.error('Error:', data.message);
+        console.error('Error response:', data.message);
       }
     } catch (error) {
       setStatus('error');
-      console.error('Error:', error);
+      console.error('Network error:', error);
     } finally {
       setLoading(false);
     }
@@ -58,7 +62,7 @@ try {
 
   const openWhatsApp = () => {
     const phoneNumber = '6283867550225';
-    const message = `Halo, saya ${form.nama}.\n\nEmail: ${form.email}\nPesan: ${form.deskripsi}`;
+    const message = `Halo, saya ${form.nama}.\n\nEmail: ${form.email}\nNo HP: ${form.nohp}\nPesan: ${form.deskripsi}`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
   };
@@ -159,18 +163,18 @@ try {
 
                 <div className="form-buttons">
                   <button type="submit" className="submit-btn" disabled={loading}>
-                    {loading ? 'Mengirim...' : 'Kirim'}
+                    {loading ? 'Mengirim...' : 'Kirim Pesan'}
                   </button>
                 </div>
 
                 {status === 'success' && (
                   <div className="status-message success" role="alert">
-                    ✅ Pesan berhasil dikirim ke email!
+                    ✅ Pesan berhasil dikirim! Anda akan diarahkan ke WhatsApp dalam beberapa detik.
                   </div>
                 )}
                 {status === 'error' && (
                   <div className="status-message error" role="alert">
-                    ❌ Gagal mengirim pesan. Silakan coba lagi.
+                    ❌ Gagal mengirim pesan. Silakan coba lagi atau hubungi langsung melalui WhatsApp.
                   </div>
                 )}
               </form>

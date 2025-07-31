@@ -12,13 +12,13 @@ export default async function handler(req, res) {
   
   if (req.method === 'POST') {
     try {
-      const { name, email, message } = req.body;
+      const { nama, nohp, email, deskripsi } = req.body;
       
       // Validasi input
-      if (!name || !email || !message) {
+      if (!nama || !email || !deskripsi) {
         return res.status(400).json({ 
           success: false,
-          message: 'Semua field wajib diisi.' 
+          message: 'Nama, email, dan deskripsi wajib diisi.' 
         });
       }
       
@@ -33,9 +33,10 @@ export default async function handler(req, res) {
       
       // Log data yang diterima
       console.log('Data kontak diterima:', { 
-        name, 
+        nama, 
+        nohp,
         email, 
-        message,
+        deskripsi,
         timestamp: new Date().toISOString()
       });
       
