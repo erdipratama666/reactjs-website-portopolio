@@ -72,7 +72,7 @@ function About() {
                   Saya terbiasa mengerjakan proyek website, menyusun dokumen, dan laporan keuangan. Dengan latar belakang pendidikan dari SDN Pasawahan 03, SMPN 43 Bandung, hingga SMAN 1 Bojongsoang, saya tumbuh sebagai pribadi yang teliti, terorganisir, dan mampu bekerja sama dengan baik.
                 </p>
                 <p data-aos="fade-up" data-aos-delay="800">
-                  Di waktu luang, saya senang belajar hal-hal baru dalam dunia programming. Bagi saya, belajar tidak berhenti di teori saja — praktik nyata dan pengalaman langsung adalah kunci untuk menciptakan solusi digital yang bermanfaat dan berdampak.
+                  Di waktu luang, saya senang belajar hal-hal baru dalam dunia programming. Bagi saya, belajar tidak berhenti di teori saja praktik nyata dan pengalaman langsung adalah kunci untuk menciptakan solusi digital yang bermanfaat dan berdampak.
                 </p>
 
                 <div className="about-social" data-aos="fade-up" data-aos-delay="1000">
